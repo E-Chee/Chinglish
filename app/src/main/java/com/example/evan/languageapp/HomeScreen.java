@@ -12,9 +12,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class HomeScreen extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener  {
+
+    private TextView appTitle;
+    private Button lessons, flashcards, games;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,9 @@ public class HomeScreen extends AppCompatActivity
         setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        setOnClickListeners();
+        wireWidgets();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -97,5 +105,23 @@ public class HomeScreen extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void wireWidgets(){
+        appTitle = (TextView) findViewById(R.id.text_app_title);
+        lessons = (Button) findViewById(R.id.button_lessons);
+        flashcards = (Button) findViewById(R.id.button_flashcards);
+        games = (Button) findViewById(R.id.button_games);
+    }
+
+    public void setOnClickListeners(){
+        lessons.setOnClickListener(this);
+        flashcards.setOnClickListener(this);
+        games.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick (View view){
+
     }
 }
