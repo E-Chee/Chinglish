@@ -1,8 +1,10 @@
 package com.example.evan.languageapp;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,8 +17,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class HomeScreen extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener  {
+public class HomeScreenActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private TextView appTitle;
     private Button lessons, flashcards, games;
@@ -24,21 +26,16 @@ public class HomeScreen extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_home_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        setOnClickListeners();
-        wireWidgets();
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //loads home screen fragment at the start
+        FragmentManager fm = getSupportFragmentManager();
+        fm.beginTransaction()
+                .replace(R.id.fragment_container, new HomeScreenFragment())
+                .commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -88,18 +85,26 @@ public class HomeScreen extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        Fragment currentFragment = null;
 
-        } else if (id == R.id.nav_slideshow) {
+        if (id == R.id.nav_home) {
+            //load here
+            currentFragment = new HomeScreenFragment();
+        } else if (id == R.id.nav_lessons) {
+            currentFragment = new LessonSelectFragment();
+        } else if (id == R.id.nav_flashcards){
+            currentFragment = new FlashCardSelectFragment();
+        } else if (id == R.id.nav_games){
+            currentFragment = new GameSelectFragment();
+        } else if (id == R.id.nav_settings){
+            currentFragment = new SettingsFragment();
+        }
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        FragmentManager fm = getSupportFragmentManager();
+        if(currentFragment != null){
+            fm.beginTransaction()
+                    .replace(R.id.fragment_container, currentFragment)
+                    .commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -107,21 +112,5 @@ public class HomeScreen extends AppCompatActivity
         return true;
     }
 
-    public void wireWidgets(){
-        appTitle = (TextView) findViewById(R.id.text_app_title);
-        lessons = (Button) findViewById(R.id.button_lessons);
-        flashcards = (Button) findViewById(R.id.button_flashcards);
-        games = (Button) findViewById(R.id.button_games);
-    }
 
-    public void setOnClickListeners(){
-        lessons.setOnClickListener(this);
-        flashcards.setOnClickListener(this);
-        games.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick (View view){
-
-    }
 }

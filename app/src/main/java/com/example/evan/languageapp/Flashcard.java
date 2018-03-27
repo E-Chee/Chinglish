@@ -1,3 +1,5 @@
+package com.example.evan.languageapp;
+
 /**
  * Created by per6 on 3/19/18.
  */
@@ -61,7 +63,7 @@ public class Flashcard {
 
     @Override
     public String toString() {
-        return "Flashcard{" +
+        return "com.example.evan.languageapp.Flashcard{" +
                 "number=" + number +
                 ", chinese='" + chinese + '\'' +
                 ", pinyin='" + pinyin + '\'' +
