@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.evan.languageapp.GreetingsActivity">
+    tools:context="com.example.evan.languageapp.GreetingsLesson"
+    android:onClick="flipCard">
 
-</android.support.constraint.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/card_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/card_back" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/card_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <include layout="@layout/card_front" />
+
+    </FrameLayout>
+
+
+</FrameLayout>
+
+
