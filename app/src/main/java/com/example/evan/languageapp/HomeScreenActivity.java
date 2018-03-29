@@ -32,6 +32,8 @@ public class HomeScreenActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         //loads home screen fragment at the start
+        //home screen activity only has the nav menu
+        //the choices w the buttons is on the home screen fragment
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction()
                 .replace(R.id.fragment_container, new HomeScreenFragment())
@@ -88,7 +90,7 @@ public class HomeScreenActivity extends AppCompatActivity
         Fragment currentFragment = null;
 
         if (id == R.id.nav_home) {
-            //load here
+            //loads fragments when clicked
             currentFragment = new HomeScreenFragment();
         } else if (id == R.id.nav_lessons) {
             currentFragment = new LessonSelectFragment();
@@ -100,6 +102,7 @@ public class HomeScreenActivity extends AppCompatActivity
             currentFragment = new SettingsFragment();
         }
 
+        //makes fragments change
         FragmentManager fm = getSupportFragmentManager();
         if(currentFragment != null){
             fm.beginTransaction()

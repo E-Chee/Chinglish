@@ -41,7 +41,6 @@ public class HomeScreenFragment extends Fragment implements View.OnClickListener
     }
 
     public void wireWidgets(){
-
         appTitle = (TextView) getView().findViewById(R.id.text_app_title);
         lessons = (Button) getView().findViewById(R.id.button_lessons);
         flashcards = (Button) getView().findViewById(R.id.button_flashcards);

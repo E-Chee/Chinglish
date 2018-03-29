@@ -29,7 +29,6 @@ public class LessonsActivity extends AppCompatActivity {
         greetings = (TextView) findViewById(R.id.greetings_textview);
         colors = (TextView) findViewById(R.id.colors_textview);
         numbers = (TextView) findViewById(R.id.numbers_textview);
-
     }
 
     private void setOnClickListeners() {
