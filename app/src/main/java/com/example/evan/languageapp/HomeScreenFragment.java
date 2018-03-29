@@ -1,8 +1,9 @@
 package com.example.evan.languageapp;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import android.widget.TextView;
  * Created by per6 on 3/23/18.
  */
 
-public class HomeScreenFragment extends Fragment implements View.OnClickListener {
+public class HomeScreenFragment extends Fragment {
 
     private TextView appTitle;
     private Button lessons, flashcards, games;
@@ -28,19 +29,8 @@ public class HomeScreenFragment extends Fragment implements View.OnClickListener
         getActivity().setTitle("Home Screen");
     }
 
-    @Override
-    public void onClick (View view){
-        switch(view.getId()){
-            case R.id.button_lessons:
-                break;
-            case R.id.button_flashcards:
-                break;
-            case R.id.button_games:
-                break;
-        }
-    }
 
-    public void wireWidgets(){
+    public void wireWidgets() {
 
         appTitle = (TextView) getView().findViewById(R.id.text_app_title);
         lessons = (Button) getView().findViewById(R.id.button_lessons);
@@ -48,10 +38,37 @@ public class HomeScreenFragment extends Fragment implements View.OnClickListener
         games = (Button) getView().findViewById(R.id.button_games);
     }
 
-    public void setOnClickListeners(){
-        lessons.setOnClickListener(this);
-        flashcards.setOnClickListener(this);
-        games.setOnClickListener(this);
+    private void setOnClickListeners() {
+        lessons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+
+                fm.beginTransaction()
+                        .replace(R.id.fragment_container, new LessonSelectFragment())
+                        .commit();
+            }
+        });
+        flashcards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+
+                fm.beginTransaction()
+                        .replace(R.id.fragment_container, new FlashCardSelectFragment())
+                        .commit();
+            }
+        });
+        games.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+
+                fm.beginTransaction()
+                        .replace(R.id.fragment_container, new GameSelectFragment())
+                        .commit();
+            }
+        });
     }
 
     @Nullable
