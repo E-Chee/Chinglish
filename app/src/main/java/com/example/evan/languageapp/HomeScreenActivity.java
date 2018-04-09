@@ -11,11 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class HomeScreenActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private TextView appTitle;
     private Button lessons, flashcards, games;
@@ -109,7 +110,21 @@ public class HomeScreenActivity extends AppCompatActivity
         return true;
     }
 
+    public void wireWidgets(){
+        appTitle = (TextView) findViewById(R.id.text_app_title);
+        lessons = (Button) findViewById(R.id.button_lessons);
+        flashcards = (Button) findViewById(R.id.button_flashcards);
+        games = (Button) findViewById(R.id.button_games);
+    }
 
+    public void setOnClickListeners(){
+        lessons.setOnClickListener(this);
+        flashcards.setOnClickListener(this);
+        games.setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick (View view){
 
+    }
 }
