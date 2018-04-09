@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
 
         android:padding="16dp"
-        android:src="@drawable/kyle"/>
+        android:src="@drawable/evan"/>
 
 
 

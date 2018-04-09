@@ -36,7 +36,7 @@ public class LessonsActivity extends AppCompatActivity {
         greeting_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(LessonsActivity.this, GreetingsLesson.class);
+                Intent i = new Intent(LessonsActivity.this, GreetingsLessonActivity.class);
                 startActivity(i);
             }
         });
