@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LessonsActivity" />
-        <activity android:name=".GreetingsLesson"></activity>
+        <activity android:name=".GreetingsLessonActivity" />
+        <activity android:name=".GreetingsFlashcardActivity"></activity>
     </application>
 
 </manifest>

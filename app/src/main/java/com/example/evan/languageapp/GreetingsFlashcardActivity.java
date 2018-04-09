@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class GreetingsLesson extends AppCompatActivity {
+public class GreetingsFlashcardActivity extends AppCompatActivity {
     private AnimatorSet cardIn, cardOut;
     private Boolean mIsBackVisible=false;
     private View front, back;
@@ -14,7 +14,7 @@ public class GreetingsLesson extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_greetings);
+        setContentView(R.layout.activity_greetings_flashcard);
         findViews();
         loadAnimations();
         changeCameraDistance();
@@ -22,12 +22,10 @@ public class GreetingsLesson extends AppCompatActivity {
     }
 
     private void changeCameraDistance() {
-        //so that when flipped the cards still fit in the screen
         int distance = 8000;
         float scale = getResources().getDisplayMetrics().density * distance;
         front.setCameraDistance(scale);
         back.setCameraDistance(scale);
-
     }
 
     private void loadAnimations() {
@@ -56,4 +54,3 @@ public class GreetingsLesson extends AppCompatActivity {
         }
     }
 }
-
