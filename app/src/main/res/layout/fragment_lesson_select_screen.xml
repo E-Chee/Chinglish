@@ -45,21 +45,20 @@
 
     <TextView
         android:id="@+id/greetings_textview"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="38dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Greetings"
+        android:text=" and Farewells"
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236"
-        tools:text="Greetings" />
+        app:layout_constraintVertical_bias="0.236" />
 
     <TextView
         android:id="@+id/colors_textview"
@@ -94,10 +93,10 @@
         android:src="@drawable/number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <TextView
         android:id="@+id/numbers_textview"
@@ -112,10 +111,9 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481"
         tools:text="Numbers" />
 
     <ImageButton

@@ -1,5 +1,6 @@
 package com.example.evan.languageapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,9 +14,9 @@ import android.widget.TextView;
  * Created by per6 on 3/23/18.
  */
 
-public class LessonSelectFragment extends Fragment {
+public class LessonSelectFragment extends Fragment implements View.OnClickListener {
 
-    private ImageButton greeting_button, color_button, number_button, grammar_button, conversation_button;
+    private ImageButton greetingButton, colorButton, numberButton, grammarButton, conversationButton;
     private TextView greetings, colors, numbers, grammar, conversations;
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -35,9 +36,9 @@ public class LessonSelectFragment extends Fragment {
     }
 
     private void wireWidgets() {
-        greeting_button = (ImageButton) getView().findViewById(R.id.greeting_button);
-        color_button = (ImageButton) getView().findViewById(R.id.color_button);
-        number_button = (ImageButton) getView().findViewById(R.id.number_button);
+        greetingButton = (ImageButton) getView().findViewById(R.id.greeting_button);
+        colorButton = (ImageButton) getView().findViewById(R.id.color_button);
+        numberButton = (ImageButton) getView().findViewById(R.id.number_button);
         greetings = (TextView) getView().findViewById(R.id.greetings_textview);
         colors = (TextView) getView().findViewById(R.id.colors_textview);
         numbers = (TextView) getView().findViewById(R.id.numbers_textview);
@@ -45,12 +46,18 @@ public class LessonSelectFragment extends Fragment {
     }
 
     private void setOnClickListeners() {
-        greeting_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        greetingButton.setOnClickListener(this);
+    }
 
-            }
-        });
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.greeting_button:
+                //Intent i = new Intent(MainActivity.this, History.class);
+                Intent i = new Intent(getActivity(), LessonOneActivity.class);
+                startActivity(i);
+                break;
+        }
     }
 
 
