@@ -49,9 +49,15 @@ public class LanguageCard {
     public static List<LanguageCard> getLessonOneCards() {
         ArrayList<LanguageCard> lessonOneCards = new ArrayList<LanguageCard>();
         lessonOneCards.add(new LanguageCard("你好", "Nǐ hǎo", "hello"));
+        lessonOneCards.add(new LanguageCard("好久不見", "Hǎojiǔ bùjiàn", " long time no see"));
         lessonOneCards.add(new LanguageCard("早上好", "Zǎoshang hǎo", "good morning"));
+        lessonOneCards.add(new LanguageCard("你好嗎", "Nǐ hǎo ma", "how are you?"));
+        lessonOneCards.add(new LanguageCard("我很好", "Wǒ hěn hǎo", "I'm great"));
+        lessonOneCards.add(new LanguageCard("馬馬虎虎", "Mǎmǎhǔhǔ", "so-so"));
+        lessonOneCards.add(new LanguageCard("我不好", "Wǒ bù hǎo", "I'm not so good"));
         lessonOneCards.add(new LanguageCard("晚安", "Wǎn'ān", "good night"));
         lessonOneCards.add(new LanguageCard("再見", "Zàijiàn", "good bye"));
+        lessonOneCards.add(new LanguageCard("明天見", "Míngtiān jiàn", "See you tomorrow"));
         return lessonOneCards;
     }
 }
