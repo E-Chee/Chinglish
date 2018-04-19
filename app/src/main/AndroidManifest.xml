@@ -19,9 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LessonsActivity" />
         <activity android:name=".GreetingsLessonActivity" />
-        <activity android:name=".GreetingsFlashcardActivity"></activity>
+        <activity android:name=".GreetingsFlashcardActivity" />
+        <activity android:name=".MatchMediumActivity" />
+        <activity android:name=".MatchHardActivity"></activity>
     </application>
 
 </manifest>
