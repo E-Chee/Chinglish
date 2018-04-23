@@ -9,8 +9,8 @@ public class MatchEasyActivity extends AppCompatActivity {
     private int numElements;
     private MemoryButton[] buttons;
     private int[] locations;
-    private String[] buttonTexts;
-
+    private String[] buttonChinese;
+    private String[] buttonDefinition;
     private MemoryButton selectedOne;
     private MemoryButton selectedTwo;
 
@@ -30,6 +30,10 @@ public class MatchEasyActivity extends AppCompatActivity {
         numElements = numColumns * numRows;
 
         buttons = new MemoryButton[numElements];
-        buttonTexts = new String[numElements / 2];
+        buttonChinese = new String[numElements / 2];
+        buttonDefinition = new String[numElements / 2];
+
+
+
     }
 }
