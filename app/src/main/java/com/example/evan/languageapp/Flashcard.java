@@ -12,6 +12,8 @@ public class Flashcard {
     private String translation;
     private boolean star;
 
+    //private Flashcard[] lessonOne, lessonTwo, lessonThree, lessonFour, lessonFive;
+
     public Flashcard(int number, String chinese, String pinyin, String translation, boolean star) {
         this.number = number;
         this.chinese = chinese;
@@ -19,6 +21,25 @@ public class Flashcard {
         this.translation = translation;
         this.star = star;
     }
+
+    public Flashcard(String chinese, String translation){
+        this.chinese = chinese;
+        this.translation = translation;
+    }
+
+    public static void main (String[] args){
+        Flashcard A1 = new Flashcard("你好 Nǐ hǎo", "Hello");
+        Flashcard A2 = new Flashcard("你好嗎 Nǐ hǎo ma?", "How are you?");
+
+        //Flashcard[] lessonOne = {A1, A2, A3, A4, A5, A6, A7, A8, A9, A10};
+        //Flashcard[] lessonTwo = {B1, B2, B3, B4, B5, B6, B7, B8, B9, B10};
+
+
+    }
+
+
+
+
 
     //Getters and setters
     public int getNumber() {
