@@ -52,6 +52,8 @@ public class FlashCardSelectFragment extends Fragment {
 
             }
         });
+
+
     }
 
 }

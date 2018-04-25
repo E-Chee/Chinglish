@@ -58,6 +58,12 @@ public class LessonSelectFragment extends Fragment implements View.OnClickListen
                 startActivity(i);
                 break;
         }
+        switch(view.getId()){
+            case R.id.number_button:
+                Intent i = new Intent(getActivity(), LessonTwoActivity.class);
+                startActivity(i);
+                break;
+        }
     }
 
 
