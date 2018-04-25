@@ -22,7 +22,9 @@
         <activity android:name=".GreetingsLessonActivity" />
         <activity android:name=".GreetingsFlashcardActivity" />
         <activity android:name=".MatchMediumActivity" />
-        <activity android:name=".MatchHardActivity"></activity>
+        <activity android:name=".LessonOneActivity" />
+        <activity android:name=".MatchHardActivity" />
+        <activity android:name=".LessonTwoActivity"></activity>
     </application>
 
 </manifest>
