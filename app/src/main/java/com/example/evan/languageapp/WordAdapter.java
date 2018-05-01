@@ -1,6 +1,7 @@
 package com.example.evan.languageapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,10 +15,10 @@ import java.util.List;
  * Created by per6 on 3/23/18.
  */
 
-public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder>  {
-
+public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> {
     private Context context;
     private List<LanguageCard> languageCards;
+    private LanguageCard languageCard;
     private int i;
 
 
@@ -26,6 +27,7 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
         this.context = context;
         this.languageCards = languageCards;
         this.i = 0;
+        this.languageCard = languageCards.get(0);
     }
 
     //creates the ViewHolder by inflating the layout and returning it
@@ -54,6 +56,7 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
         return languageCards.size();
     }
 
+
     //inside, we wire widgets for our layout
     class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -64,6 +67,29 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
             chinese = itemView.findViewById(R.id.chinese);
             pinyin = itemView.findViewById(R.id.pinyin);
             english = itemView.findViewById(R.id.english);
+
+            final int id = itemView.getId();
+
+            chinese.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.d("view id", "onClick: " + view.getId() + " " + R.id.chinese);
+                  switch(view.getId()){
+                      case R.id.chinese:
+//                          Log.d("bundle for recyclerview", "onClick: " + bundle.getString("intro paragraph"));
+                          if(languageCard.getEnglish().equals("hello")) {
+                              Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
+                              context.startActivity(i);
+                          }
+                          else if(languageCard.getEnglish().equals("long time no see")) {
+                              Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
+                              context.startActivity(i);
+                          }
+                      break;
+        }
+                }
+            });
         }
     }
+
 }
