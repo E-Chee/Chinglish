@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class LessonTwoActivity extends AppCompatActivity {
+public class LessonThreeActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -20,7 +20,7 @@ public class LessonTwoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson_two);
+        setContentView(R.layout.activity_lesson_three);
 
         //wire widgets
         wireWidgets();
@@ -44,6 +44,6 @@ public class LessonTwoActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        results = LanguageCard.getLessonTwoCards();
+        results = LanguageCard.getLessonThreeCards();
     }
 }
