@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.evan.languageapp.LessonTwoActivity">
+    tools:context="com.example.evan.languageapp.LessonFourActivity">
 
     <TextView
         android:id="@+id/lesson_title"
@@ -14,7 +14,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Numbers"
+        android:text="Conversations"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:justificationMode="none"
-        android:text="Welcome to your numbers lesson! This lesson is made to teach you numbers in Chinese! By the end of this lesson you should be able to count to 10."
+        android:text="Welcome to your conversation lesson! This lesson is made to teach you conversational phrases in Chinese! By the end of this lesson you should be able to have learned some basic conversational phrases."
         android:textAlignment="center"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"

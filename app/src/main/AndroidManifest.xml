@@ -24,7 +24,10 @@
         <activity android:name=".MatchMediumActivity" />
         <activity android:name=".LessonOneActivity" />
         <activity android:name=".MatchHardActivity" />
-        <activity android:name=".LessonTwoActivity"></activity>
+        <activity android:name=".LessonTwoActivity" />
+        <activity android:name=".LessonThreeActivity" />
+        <activity android:name=".LessonFourActivity" />
+        <activity android:name=".LessonFiveActivity"></activity>
     </application>
 
 </manifest>
