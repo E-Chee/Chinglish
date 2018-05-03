@@ -79,9 +79,9 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
 //                          Log.d("bundle for recyclerview", "onClick: " + bundle.getString("intro paragraph"));
                             if(languageCard.getEnglish().equals("hello")) {
                                 Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
-                                i.putExtra("background info", "This here is an interesting phrase. Nǐ means you, and hǎo means good." +
-                                        "However, when you put these two together, you get hello." +
-                                        "This provides some insight into Chinese culture. Imagine a world where you say, \"You good\"." +
+                                i.putExtra("background info", "This here is an interesting phrase. Nǐ means you, and hǎo means good. " +
+                                        "However, when you put these two together, you get hello. " +
+                                        "This provides some insight into Chinese culture. Imagine a world where you say, \"You good\". " +
                                         "Kind of strange isn't it?");
                                 context.startActivity(i);
                                 languageCard = languageCards.get(pos++);
