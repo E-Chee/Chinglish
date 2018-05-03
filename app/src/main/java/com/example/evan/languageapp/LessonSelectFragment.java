@@ -60,9 +60,7 @@ public class LessonSelectFragment extends Fragment implements View.OnClickListen
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.greeting_button:
-                //Intent i = new Intent(MainActivity.this, History.class);
-                //Intent i = new Intent(getActivity(), LessonOneActivity.class);
-                //startActivity(i);
+//                Intent i = new Intent(getActivity(), )
                 break;
             case R.id.number_button:
                 Intent j = new Intent(getActivity(), LessonTwoActivity.class);
