@@ -1,6 +1,7 @@
 package com.example.evan.languageapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,14 +19,16 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
 
     private Context context;
     private List<LanguageCard> languageCards;
-    private int i;
+    private LanguageCard languageCard;
+    private int pos;
 
 
     public WordAdapter(Context context, List<LanguageCard> languageCards) {
         Log.d("languageCard", "WordAdapter: " + languageCards);
         this.context = context;
         this.languageCards = languageCards;
-        this.i = 0;
+        this.pos = 0;
+        this.languageCard = languageCards.get(pos);
     }
 
     //creates the ViewHolder by inflating the layout and returning it
@@ -64,6 +67,34 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
             chinese = itemView.findViewById(R.id.chinese);
             pinyin = itemView.findViewById(R.id.pinyin);
             english = itemView.findViewById(R.id.english);
+
+            final int id = itemView.getId();
+
+            chinese.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.d("view id", "onClick: " + view.getId() + " " + R.id.chinese);
+                    switch(view.getId()){
+                        case R.id.chinese:
+//                          Log.d("bundle for recyclerview", "onClick: " + bundle.getString("intro paragraph"));
+                            if(languageCard.getEnglish().equals("hello")) {
+                                Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
+                                i.putExtra("background info", "This here is an interesting phrase. Nǐ means you, and hǎo means good." +
+                                        "However, when you put these two together, you get hello." +
+                                        "This provides some insight into Chinese culture. Imagine a world where you say, \"You good\"." +
+                                        "Kind of strange isn't it?");
+                                context.startActivity(i);
+                                languageCard = languageCards.get(pos++);
+                            }
+                            else if(languageCard.getEnglish().equals("long time no see")) {
+                                Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
+                                context.startActivity(i);
+                            }
+                            break;
+                    }
+                }
+            });
+
         }
     }
 }
