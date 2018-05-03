@@ -11,19 +11,15 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by per6 on 4/11/18.
- */
-
-public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.MyViewHolder> {
+public class GrammarFlashcardAdapter extends RecyclerView.Adapter<GrammarFlashcardAdapter.MyViewHolder> {
     private Context context;
-//    private List<Vocab> chWords; //data
+    //    private List<Vocab> chWords; //data
 //    private List<Vocab> pinyin;
 //    private List<Vocab> engWords;
     private List<Vocab> words;
 
 
-    public FlashcardAdapter(Context context, List<Vocab> words ) {
+    public GrammarFlashcardAdapter(Context context, List<Vocab> words ) {
         this.context = context;
         this.words = words;
 
@@ -33,7 +29,7 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.MyVi
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.greetingsflashcard_item, parent, false);
+                .inflate(R.layout.grammarflashcard_item, parent, false);
 
         return new MyViewHolder(itemView);
     }
@@ -117,6 +113,5 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.MyVi
     }
 
 }
-
 
 

@@ -37,6 +37,8 @@ public class FlashCardSelectFragment extends Fragment {
         greeting_button = (ImageButton) getView().findViewById(R.id.greeting_button);
         color_button = (ImageButton) getView().findViewById(R.id.color_button);
         number_button = (ImageButton) getView().findViewById(R.id.number_button);
+        grammar_button = (ImageButton) getView().findViewById(R.id.grammar_button);
+        conversation_button = (ImageButton) getView().findViewById(R.id.conversation_button);
         greetings = (TextView) getView().findViewById(R.id.greetings_textview);
         colors = (TextView) getView().findViewById(R.id.colors_textview);
         numbers = (TextView) getView().findViewById(R.id.numbers_textview);
@@ -49,9 +51,40 @@ public class FlashCardSelectFragment extends Fragment {
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), GreetingsFlashcardActivity.class);
                 startActivity(i);
-
             }
         });
+        color_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), ColorsFlashcardActivity.class);
+                startActivity(i);
+            }
+        });
+
+        number_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), NumbersFlashcardActivity.class);
+                startActivity(i);
+            }
+        });
+        grammar_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), GrammarFlashcardActivity.class);
+                startActivity(i);
+            }
+        });
+
+        conversation_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), ConversationFlashcardActivity.class);
+                startActivity(i);
+            }
+        });
+
+
 
 
     }
