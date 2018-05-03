@@ -1,8 +1,8 @@
 package com.example.evan.languageapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class LessonOneRecyclerViewDetails extends AppCompatActivity {
@@ -19,10 +19,13 @@ public class LessonOneRecyclerViewDetails extends AppCompatActivity {
 
         WireWidgets();
         bodyText.setText(body);
+        if(bodyText.getText().equals(null));
+            bodyText.setText("IT DIDN'T LOAD LUL");
     }
 
     private void WireWidgets() {
         title = (TextView) findViewById(R.id.background_title);
         bodyText = (TextView) findViewById(R.id.background_body);
     }
+
 }

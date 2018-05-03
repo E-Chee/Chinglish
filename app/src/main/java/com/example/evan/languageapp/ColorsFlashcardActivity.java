@@ -13,9 +13,9 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GreetingsFlashcardActivity extends AppCompatActivity {
+public class ColorsFlashcardActivity extends AppCompatActivity {
     private AnimatorSet cardIn, cardOut;
-    private Boolean mIsBackVisible=false;
+    private Boolean mIsBackVisible = false;
     private View front, back;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -26,20 +26,19 @@ public class GreetingsFlashcardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_greetings_flashcard);
+        setContentView(R.layout.activity_colors_flashcard);
 
         words = new ArrayList<>();
-        words.addAll(VocabGenerator.getGreetings());
-
+        words.addAll(VocabGenerator.getColors());
 
 
         //wire the recycler view
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        //create a layout manager for the recyclerview
 
         SnapHelper helper = new LinearSnapHelper();
         helper.attachToRecyclerView(recyclerView);
 
+        //create a layout manager for the recyclerview
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
@@ -51,42 +50,8 @@ public class GreetingsFlashcardActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
-
-
-
-
         //loadAnimations();
         //changeCameraDistance();
 
     }
-
-//    private void changeCameraDistance() {
-//       int distance = 8000;
-//       float scale = getResources().getDisplayMetrics().density * distance;
-//        front.setCameraDistance(scale);
-//        back.setCameraDistance(scale);
-//    }
-
-//    private void loadAnimations() {
-//        cardIn= (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.animation);
-//        cardOut = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.backanimation);
-//    }
-
-
-//
-//    public void flipCard(View view) {
-//        if (!mIsBackVisible) {
-//            cardIn.setTarget(front);
-//            cardOut.setTarget(back);
-//            cardIn.start();
-//            cardOut.start();
-//            mIsBackVisible = true;
-//        } else {
-//            cardIn.setTarget(back);
-//            cardOut.setTarget(front);
-//            cardIn.start();
-//            cardOut.start();
-//            mIsBackVisible = false;
-//        }
-//    }
 }

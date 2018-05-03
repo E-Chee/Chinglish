@@ -15,20 +15,20 @@ import java.util.List;
  * Created by per6 on 3/23/18.
  */
 
-public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> {
+public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder>  {
+
     private Context context;
     private List<LanguageCard> languageCards;
     private LanguageCard languageCard;
-    private int i;
-    public static final String BACKGROUND_TEXT = "CHINGLISH";
+    private int pos;
 
 
     public WordAdapter(Context context, List<LanguageCard> languageCards) {
         Log.d("languageCard", "WordAdapter: " + languageCards);
         this.context = context;
         this.languageCards = languageCards;
-        this.i = 0;
-        this.languageCard = languageCards.get(0);
+        this.pos = 0;
+        this.languageCard = languageCards.get(pos);
     }
 
     //creates the ViewHolder by inflating the layout and returning it
@@ -57,7 +57,6 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
         return languageCards.size();
     }
 
-
     //inside, we wire widgets for our layout
     class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -75,26 +74,27 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
                 @Override
                 public void onClick(View view) {
                     Log.d("view id", "onClick: " + view.getId() + " " + R.id.chinese);
-                  switch(view.getId()){
-                      case R.id.chinese:
+                    switch(view.getId()){
+                        case R.id.chinese:
 //                          Log.d("bundle for recyclerview", "onClick: " + bundle.getString("intro paragraph"));
-                          if(languageCard.getEnglish().equals("hello")) {
-                              Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
-                              i.putExtra("background info", "This here is an interesting phrase. Nǐ means you, and hǎo means good." +
-                                              "However, when you put these two together, you get hello." +
-                                      "This provides some insight into Chinese culture. Imagine a world where you say, \"You good\"." +
-                                      "Kind of strange isn't it?");
-                              context.startActivity(i);
-                          }
-                          else if(languageCard.getEnglish().equals("long time no see")) {
-                              Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
-                              context.startActivity(i);
-                          }
-                      break;
-        }
+                            if(languageCard.getEnglish().equals("hello")) {
+                                Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
+                                i.putExtra("background info", "This here is an interesting phrase. Nǐ means you, and hǎo means good." +
+                                        "However, when you put these two together, you get hello." +
+                                        "This provides some insight into Chinese culture. Imagine a world where you say, \"You good\"." +
+                                        "Kind of strange isn't it?");
+                                context.startActivity(i);
+                                languageCard = languageCards.get(pos++);
+                            }
+                            else if(languageCard.getEnglish().equals("long time no see")) {
+                                Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
+                                context.startActivity(i);
+                            }
+                            break;
+                    }
                 }
             });
+
         }
     }
-
 }

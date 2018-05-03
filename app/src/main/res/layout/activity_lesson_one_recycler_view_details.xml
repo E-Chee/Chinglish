@@ -14,7 +14,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:justificationMode="grea"
         android:text="More Information"
         android:textAlignment="center"
         android:textSize="25sp"
@@ -27,13 +26,13 @@
 
     <TextView
         android:id="@+id/background_body"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Ur text didnt load LUL"
+        android:text="Text Body"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,5 +40,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.247"
-        tools:text="Text Body" />
+        tools:text="blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah" />
 </android.support.constraint.ConstraintLayout>
