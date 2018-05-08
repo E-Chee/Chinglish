@@ -10,7 +10,6 @@ import android.widget.TextView;
 import java.util.List;
 
 public class LessonOneActivity extends AppCompatActivity {
-
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private WordAdapter adapter;

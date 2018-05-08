@@ -7,7 +7,6 @@ import android.util.Log;
 import android.widget.TextView;
 
 public class LessonOneRecyclerViewDetails extends AppCompatActivity {
-
     private TextView title, bodyText;
 
     @Override
