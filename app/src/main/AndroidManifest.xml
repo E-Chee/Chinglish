@@ -20,7 +20,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".GreetingsLessonActivity" />
+        <activity android:name=".NumbersFlashcardActivity" />
+        <activity android:name=".ColorsFlashcardActivity" />
+        <activity android:name=".GrammarFlashcardActivity" />
+        <activity android:name=".ConversationFlashcardActivity" />
         <activity android:name=".LessonOneActivity" />
+        <activity android:name=".LessonTwoActivity" />
+        <activity android:name=".LessonThreeActivity" />
+        <activity android:name=".LessonFourActivity" />
+        <activity android:name=".LessonFiveActivity" />
         <activity android:name=".GreetingsFlashcardActivity" />
         <activity android:name=".LessonOneRecyclerViewDetails" />
     </application>
