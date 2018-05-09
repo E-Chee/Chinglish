@@ -37,6 +37,8 @@ public class GrammarFlashcardActivity extends AppCompatActivity {
 
         SnapHelper helper = new LinearSnapHelper();
         helper.attachToRecyclerView(recyclerView);
+
+        recyclerView.smoothScrollBy(0, 1);
         //create a layout manager for the recyclerview
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);

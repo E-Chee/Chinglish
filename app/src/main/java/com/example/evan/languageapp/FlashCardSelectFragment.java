@@ -56,31 +56,31 @@ public class FlashCardSelectFragment extends Fragment {
         color_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), ColorsFlashcardActivity.class);
-                startActivity(i);
+                Intent o = new Intent(getActivity(), ColorsFlashcardActivity.class);
+                startActivity(o);
             }
         });
 
         number_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), NumbersFlashcardActivity.class);
-                startActivity(i);
+                Intent p = new Intent(getActivity(), NumbersFlashcardActivity.class);
+                startActivity(p);
             }
         });
         grammar_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), GrammarFlashcardActivity.class);
-                startActivity(i);
+                Intent j = new Intent(getActivity(), GrammarFlashcardActivity.class);
+                startActivity(j);
             }
         });
 
         conversation_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), ConversationFlashcardActivity.class);
-                startActivity(i);
+                Intent k = new Intent(getActivity(), ConversationFlashcardActivity.class);
+                startActivity(k);
             }
         });
 

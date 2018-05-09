@@ -3,6 +3,7 @@ package com.example.evan.languageapp;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.content.Context;
+import android.os.CountDownTimer;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,9 +22,10 @@ public class GreetingsFlashcardAdapter extends RecyclerView.Adapter<GreetingsFla
 //    private List<Vocab> pinyin;
 //    private List<Vocab> engWords;
     private List<Vocab> words;
+    private int timer=1;
 
 
-    public GreetingsFlashcardAdapter(Context context, List<Vocab> words ) {
+    public GreetingsFlashcardAdapter(Context context, List<Vocab> words) {
         this.context = context;
         this.words = words;
 
@@ -50,6 +52,8 @@ public class GreetingsFlashcardAdapter extends RecyclerView.Adapter<GreetingsFla
         private View back, front;
         private AnimatorSet cardIn, cardOut;
         private boolean mIsBackVisible = false;
+        private boolean mIsAnimating = false;
+
 
         public MyViewHolder(View itemView) {
 
@@ -68,34 +72,52 @@ public class GreetingsFlashcardAdapter extends RecyclerView.Adapter<GreetingsFla
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (!mIsBackVisible) {
+                    if (!mIsAnimating) {
+                        mIsAnimating = true;
+                        CountDownTimer stopTimer = new CountDownTimer(1000, 1000) {
+                            @Override
+                            public void onTick(long l) {
 
-                        cardIn.setTarget(back);
-                        cardOut.setTarget(front);
-                        cardIn.start();
-                        cardOut.start();
-                        mIsBackVisible = true;
-                    } else {
-                        cardIn.setTarget(front);
-                        cardOut.setTarget(back);
-                        cardIn.start();
+                            }
 
-                        cardOut.start();
-                        mIsBackVisible = false;
+                            @Override
+                            public void onFinish() {
+                                mIsAnimating=false;
+
+                            }
+                        };
+                        stopTimer.start();
+                        if (!mIsBackVisible) {
+
+                            cardIn.setTarget(back);
+                            cardOut.setTarget(front);
+                            cardIn.start();
+                            cardOut.start();
+                            mIsBackVisible = true;
+                        } else {
+                            cardIn.setTarget(front);
+                            cardOut.setTarget(back);
+                            cardIn.start();
+
+                            cardOut.start();
+                            mIsBackVisible = false;
+                        }
                     }
+
+
+
+
                 }
 
             });
         }
 
         public void changeCameraDistance() {
-            int distance = 10000;
+            int distance = 50000;
             float scale = context.getResources().getDisplayMetrics().density * distance;
             front.setCameraDistance(scale);
             back.setCameraDistance(scale);
         }
-
-
 
 
     }
