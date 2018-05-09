@@ -20,7 +20,7 @@ public class GreetingsFlashcardAdapter extends RecyclerView.Adapter<GreetingsFla
     private Context context;
     //    private List<Vocab> chWords; //data
 //    private List<Vocab> pinyin;
-//    private List<Vocab> engWords;
+//    private List<Vocab> engWords;///
     private List<Vocab> words;
     private int timer=1;
 
