@@ -47,14 +47,30 @@ public class HomeScreenActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
         }
+
+        else {
+
+            Fragment currentFragment = null;
+
+            currentFragment = new HomeScreenFragment();
+
+            FragmentManager fm = getSupportFragmentManager();
+            if(currentFragment != null){
+                fm.beginTransaction()
+                        .replace(R.id.fragment_container, currentFragment)
+                        .commit();
+            }
+        }
+
+
     }
 
     @Override

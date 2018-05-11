@@ -35,6 +35,8 @@ public class FlashCardSelectFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_flashcard_select_screen, container, false);
     }
 
+
+
     private void wireWidgets() {
         greeting_button = (ImageButton) getView().findViewById(R.id.greeting_button);
         color_button = (ImageButton) getView().findViewById(R.id.color_button);
