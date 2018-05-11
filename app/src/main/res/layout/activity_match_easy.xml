@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.evan.languageapp.MatchEasyActivity"
     android:id="@+id/grid_layout_easy"
+    android:screenOrientation="portrait"
     android:columnCount="4"
     android:rowCount="4">
 </GridLayout>
