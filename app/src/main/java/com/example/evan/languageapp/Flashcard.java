@@ -61,19 +61,19 @@ public class Flashcard {
         Flashcard C9 = new Flashcard("白色 Báisè", "White");
         Flashcard C10 = new Flashcard("灰色 Huīsè", "Gray");
 
-        Flashcard D1 = new Flashcard("我 wo3", "I");                                 //Lesson 4 Grammar
-        Flashcard D2 = new Flashcard("你 ni3", "You");
+        Flashcard D1 = new Flashcard("我 wǒ", "I");                                 //Lesson 4 Grammar
+        Flashcard D2 = new Flashcard("你 nǐ", "You");
         Flashcard D3 = new Flashcard("和 hé", "And");
         Flashcard D4 = new Flashcard("的 de", "A word showing possession");
         Flashcard D5 = new Flashcard("嗎 ma", "A word indicating a question");
-        Flashcard D6 = new Flashcard("不 bu4/bu2", "No / Not");
-        Flashcard D7 = new Flashcard("是 shi4", "Is / Am / Are");
+        Flashcard D6 = new Flashcard("不 bù/bú", "No / Not");
+        Flashcard D7 = new Flashcard("是 shì", "Is / Am / Are");
         Flashcard D8 = new Flashcard("也 yě", "Also");
-        Flashcard D9 = new Flashcard("得 de2", "Shows degree");
+        Flashcard D9 = new Flashcard("得 dé", "Shows degree");
         Flashcard D10 = new Flashcard("得 de", "Auxiliary verb / Used after a verb");
 
-        Flashcard E1 = new Flashcard("是的 shi4de", "Yes");                          //Lesson 5 Conversations
-        Flashcard E2 = new Flashcard("不是 bu2shi4", "No");
+        Flashcard E1 = new Flashcard("是的 shìde", "Yes");                          //Lesson 5 Conversations
+        Flashcard E2 = new Flashcard("不是 búshì", "No");
         Flashcard E3 = new Flashcard("喜歡 xǐhuān", "Like");
         Flashcard E4 = new Flashcard("謝謝 xièxiè", "Thank you");
         Flashcard E5 = new Flashcard("不客氣 bù kèqì", "You're welcome");

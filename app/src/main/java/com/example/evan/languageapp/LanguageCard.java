@@ -93,23 +93,23 @@ public class LanguageCard {
 
     public static List<LanguageCard> getLessonFourCards() {
         ArrayList<LanguageCard> lessonFourCards = new ArrayList<LanguageCard>();
-        lessonFourCards.add(new LanguageCard("我", "wo3", "I"));
-        lessonFourCards.add(new LanguageCard("你", "ni3", "you"));
+        lessonFourCards.add(new LanguageCard("我", "wǒ", "I"));
+        lessonFourCards.add(new LanguageCard("你", "nǐ", "you"));
         lessonFourCards.add(new LanguageCard("和", "hé", "and"));
         lessonFourCards.add(new LanguageCard("的", "de", "a word showing possession"));
         lessonFourCards.add(new LanguageCard("嗎", "ma", "a word indicating a question"));
-        lessonFourCards.add(new LanguageCard("不", "bu4/bu2", "no / not"));
-        lessonFourCards.add(new LanguageCard("是", "shi4", "is / am / are"));
+        lessonFourCards.add(new LanguageCard("不", "bù/bú", "no / not"));
+        lessonFourCards.add(new LanguageCard("是", "shì", "is / am / are"));
         lessonFourCards.add(new LanguageCard("也", "yě", "also"));
-        lessonFourCards.add(new LanguageCard("得", "de2", "shows degree"));
+        lessonFourCards.add(new LanguageCard("得", "dé", "shows degree"));
         lessonFourCards.add(new LanguageCard("得", "de", "auxiliary verb / used after a verb"));
         return lessonFourCards;
     }
     
     public static List<LanguageCard> getLessonFiveCards() {
         ArrayList<LanguageCard> lessonFiveCards = new ArrayList<LanguageCard>();
-        lessonFiveCards.add(new LanguageCard("是的", "shi4de", "yes"));
-        lessonFiveCards.add(new LanguageCard("不是", "bu2shi4", "no"));
+        lessonFiveCards.add(new LanguageCard("是的", "shìde", "yes"));
+        lessonFiveCards.add(new LanguageCard("不是", "búshì", "no"));
         lessonFiveCards.add(new LanguageCard("喜歡", "xǐhuān", "like"));
         lessonFiveCards.add(new LanguageCard("謝謝", "xièxiè", "thank you"));
         lessonFiveCards.add(new LanguageCard("不客氣", "bù kèqì", "you're welcome"));
