@@ -68,12 +68,12 @@ public class VocabGenerator {
         words.add(new Vocab("你", "nǐ", "You"));
         words.add(new Vocab("和", "hé", "And"));
         words.add(new Vocab("的", "de", "a word showing possession"));
-        words.add(new Vocab("嗎", "ma", "a word indicating a questions"));
+        words.add(new Vocab("嗎", "ma", "a word indicating a question"));
         words.add(new Vocab("不", "bù/bú", "no/not"));
         words.add(new Vocab("是", "shì", "is/am/are"));
         words.add(new Vocab("也", "yě", "also"));
         words.add(new Vocab("得", "dé", "shows degree"));
-        words.add(new Vocab("得", "de", "auxiliary verb/used after a verb"));
+        words.add(new Vocab("得", "de", "auxiliary verb used after a verb"));
         return words;
     }
 

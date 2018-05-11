@@ -28,11 +28,13 @@ public class FlashCardSelectFragment extends Fragment {
         setOnClickListeners();
     }
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_flashcard_select_screen, container, false);
     }
+
     private void wireWidgets() {
         greeting_button = (ImageButton) getView().findViewById(R.id.greeting_button);
         color_button = (ImageButton) getView().findViewById(R.id.color_button);
