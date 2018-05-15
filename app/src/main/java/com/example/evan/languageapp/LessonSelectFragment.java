@@ -16,8 +16,8 @@ import android.widget.TextView;
 
 public class LessonSelectFragment extends Fragment implements View.OnClickListener {
 
-    private ImageButton greetingButton, colorButton, numberButton, grammarButton, conversationButton;
-    private TextView greetings, colors, numbers, grammar, conversations;
+    private ImageButton greetingButton, colorButton, numberButton, grammarButton, conversationButton, pinyinButton;
+    private TextView greetings, colors, numbers, grammar, conversations, pinyin;
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -41,11 +41,13 @@ public class LessonSelectFragment extends Fragment implements View.OnClickListen
         numberButton = (ImageButton) getView().findViewById(R.id.number_button);
         grammarButton = (ImageButton) getView().findViewById(R.id.grammar_button);
         conversationButton = (ImageButton) getView().findViewById(R.id.conversation_button);
+        pinyinButton = (ImageButton) getView().findViewById(R.id.pinyin_button);
         greetings = (TextView) getView().findViewById(R.id.greetings_textview);
         colors = (TextView) getView().findViewById(R.id.colors_textview);
         numbers = (TextView) getView().findViewById(R.id.numbers_textview);
         grammar = (TextView) getView().findViewById(R.id.grammar_textview);
         conversations = (TextView) getView().findViewById(R.id.grammar_textview);
+        pinyin = (TextView) getView().findViewById(R.id.pinyin_textView);
     }
 
     private void setOnClickListeners() {
@@ -54,6 +56,7 @@ public class LessonSelectFragment extends Fragment implements View.OnClickListen
         colorButton.setOnClickListener(this);
         grammarButton.setOnClickListener(this);
         conversationButton.setOnClickListener(this);
+        pinyinButton.setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +81,10 @@ public class LessonSelectFragment extends Fragment implements View.OnClickListen
             case R.id.conversation_button:
                 Intent b = new Intent(getActivity(), LessonFiveActivity.class);
                 startActivity(b);
+                break;
+            case R.id.pinyin_button:
+                Intent c = new Intent(getActivity(), PinyinLessonActivity.class);
+                startActivity(c);
                 break;
 
         }
