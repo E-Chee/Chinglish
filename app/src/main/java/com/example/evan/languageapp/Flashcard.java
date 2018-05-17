@@ -1,10 +1,13 @@
 package com.example.evan.languageapp;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by per6 on 3/19/18.
  */
 
-public class Flashcard {
+public class Flashcard implements Parcelable{
 
     private int number;
     private String chinese;
@@ -13,6 +16,16 @@ public class Flashcard {
     private boolean star;
 
     //private Flashcard[] lessonOne, lessonTwo, lessonThree, lessonFour, lessonFive;
+
+    public Flashcard(){
+        super();
+    }
+
+    public Flashcard(Parcel parcel){
+        this.chinese = parcel.readString();
+        this.translation = parcel.readString();
+    }
+
 
     public Flashcard(int number, String chinese, String pinyin, String translation, boolean star) {
         this.number = number;
@@ -95,8 +108,6 @@ public class Flashcard {
 
 
 
-
-
     //Getters and setters
     public int getNumber() {
         return number;
@@ -148,5 +159,29 @@ public class Flashcard {
                 ", star=" + star +
                 '}';
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(this.chinese);
+        parcel.writeString(this.translation);
+    }
+
+    public static final Creator<Flashcard> CREATOR = new Creator<Flashcard>() {
+        @Override
+        public Flashcard createFromParcel(Parcel parcel) {
+            return new Flashcard(parcel);
+        }
+
+        @Override
+        public Flashcard[] newArray(int i) {
+            return new Flashcard[i];
+        }
+    };
+
 
 }

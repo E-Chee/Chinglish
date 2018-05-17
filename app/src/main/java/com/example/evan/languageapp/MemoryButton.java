@@ -15,7 +15,7 @@ public class MemoryButton extends AppCompatButton {
     private int row;
     private int collumn;
     private String text;
-    private boolean isMatched;
+    protected boolean isMatched;
 
     public MemoryButton (Context context, int r, int c, String cardText){
         super(context);
@@ -33,10 +33,10 @@ public class MemoryButton extends AppCompatButton {
 
 
 
-    public void correct(){
+    /*public void correct(){
         //if(isMatched)
         //remove item
-    }
+    }*/
 
     public boolean isMatched() {
         return isMatched;
@@ -44,6 +44,12 @@ public class MemoryButton extends AppCompatButton {
 
     public void setMatched(boolean matched) {
         isMatched = matched;
+    }
+
+
+    @Override
+    public String getText() {
+        return text;
     }
 
 }

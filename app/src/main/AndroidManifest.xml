@@ -44,6 +44,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".LessonOneRecyclerViewDetails"
             android:screenOrientation="portrait"/>
+        <activity android:name=".MatchHardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MatchMediumActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MatchEasyActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".PinyinLessonActivity"
             android:screenOrientation="portrait"/>
     </application>
