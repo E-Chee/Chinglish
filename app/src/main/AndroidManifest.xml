@@ -12,25 +12,40 @@
         <activity
             android:name=".HomeScreenActivity"
             android:label="@string/title_activity_home_screen"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GreetingsLessonActivity" />
-        <activity android:name=".NumbersFlashcardActivity" />
-        <activity android:name=".ColorsFlashcardActivity" />
-        <activity android:name=".GrammarFlashcardActivity" />
-        <activity android:name=".ConversationFlashcardActivity" />
-        <activity android:name=".LessonOneActivity" />
-        <activity android:name=".LessonTwoActivity" />
-        <activity android:name=".LessonThreeActivity" />
-        <activity android:name=".LessonFourActivity" />
-        <activity android:name=".LessonFiveActivity" />
-        <activity android:name=".GreetingsFlashcardActivity" />
-        <activity android:name=".LessonOneRecyclerViewDetails" />
+        <activity android:name=".GreetingsLessonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NumbersFlashcardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ColorsFlashcardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GrammarFlashcardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ConversationFlashcardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LessonOneActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LessonTwoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LessonThreeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LessonFourActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LessonFiveActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GreetingsFlashcardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LessonOneRecyclerViewDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".PinyinLessonActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
