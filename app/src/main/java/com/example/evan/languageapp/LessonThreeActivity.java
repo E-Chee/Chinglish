@@ -44,6 +44,6 @@ public class LessonThreeActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        //results = LanguageCard.getLessonThreeCards();
+        results = LanguageCard.getLessonThreeCards();
     }
 }
