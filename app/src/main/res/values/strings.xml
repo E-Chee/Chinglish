@@ -12,4 +12,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lesson_one_text">Hello there! Welcome to your first lesson! This first lesson is made to introduce you to the wonderful world of Chinese! We wil explore topics like how to greet different age and friend groups among others. Click on a card to get more details and a quiz.</string>
+    <string name="lesson_1_card_1">This here is an interesting phrase. Ni means you, and hao means good. However, when you put these two together, you get hello. This provides some interesting insight into Chinese culture. Imagine a world where you say, “You are good” instead of saying hi. Kind of strange isn’t it?</string>
+    <string name="lesson_1_card_2">In Chinese, hǎo can mean many things, though most commonly, good. In this case however, hǎo becomes an adverb which modifies the word after it, jiǔ. Jiǔ means long and bùjiàn literally means no see. So when hǎo modifies jiǔ, it means very, resulting in the phrase meaning, “long time no see”.</string>
 </resources>

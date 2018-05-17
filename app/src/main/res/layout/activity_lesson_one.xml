@@ -31,7 +31,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:justificationMode="none"
-        android:text="Hello there! Welcome to your first lesson! This first lesson is made to introduce you to the wonderful world of Chinese! We wil explore topics like how to greet different age and friend groups among others."
+        android:text="@string/lesson_one_text"
         android:textAlignment="center"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"

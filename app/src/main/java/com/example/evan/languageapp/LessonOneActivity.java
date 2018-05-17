@@ -43,6 +43,6 @@ public class LessonOneActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        results = LanguageCard.getLessonOneCards();
+        results = LanguageCard.getLessonOneCards(this);
     }
 }

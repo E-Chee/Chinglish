@@ -44,6 +44,6 @@ public class LessonTwoActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        results = LanguageCard.getLessonTwoCards();
+        //results = LanguageCard.getLessonTwoCards();
     }
 }
