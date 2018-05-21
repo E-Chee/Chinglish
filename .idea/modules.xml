@@ -5,9 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/Chinglish.iml" filepath="$PROJECT_DIR$/Chinglish.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChinglishLanguageApp.iml" filepath="$PROJECT_DIR$/ChinglishLanguageApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChinglishProject.iml" filepath="$PROJECT_DIR$/ChinglishProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LanguageApp.iml" filepath="$PROJECT_DIR$/LanguageApp.iml" />
       <module fileurl="file://C:\Users\Evan\AndroidStudioProjects\Chinglish\LanguageApp.iml" filepath="C:\Users\Evan\AndroidStudioProjects\Chinglish\LanguageApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LanguageApp.iml" filepath="$PROJECT_DIR$/LanguageApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -13,7 +13,7 @@ public class PinyinLessonActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private WordAdapter adapter;
+    private PinyinAdapter adapter;
     private List<LanguageCard> results;
     private TextView lessonTitle, lessonIntro;
 
@@ -32,7 +32,7 @@ public class PinyinLessonActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         //create the adapter
         initRecyclerView();
-        adapter = new WordAdapter(this, results);
+        adapter = new PinyinAdapter(this, results);
         //set the adapter
         recyclerView.setAdapter(adapter);
     }
@@ -44,6 +44,6 @@ public class PinyinLessonActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        results = LanguageCard.getLessonOneCards(this);
+        results = LanguageCard.getPinyinCards(this);
     }
 }
