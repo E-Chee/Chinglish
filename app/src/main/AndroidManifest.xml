@@ -42,7 +42,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".GreetingsFlashcardActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".LessonOneRecyclerViewDetails"
+        <activity android:name=".RecyclerViewDetails"
             android:screenOrientation="portrait"/>
         <activity android:name=".MatchHardActivity"
             android:screenOrientation="portrait"/>

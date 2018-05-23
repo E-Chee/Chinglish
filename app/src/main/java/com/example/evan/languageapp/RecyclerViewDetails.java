@@ -8,30 +8,33 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LessonOneRecyclerViewDetails extends AppCompatActivity {
+public class RecyclerViewDetails extends AppCompatActivity {
     private TextView title, bodyText, question, answerA, answerB, answerC, answerD;
     private Button a, b, c, d;
     private int score;
     private boolean answer;
+    private LanguageCard body;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson_one_recycler_view_details);
+        setContentView(R.layout.activity_recycler_view_details);
 
         Intent i = getIntent();
-        String body = i.getStringExtra("background info");
+        body = i.getParcelableExtra("background info");
         Log.d("body text", "onCreate the body text was: " + body);
 
         WireWidgets();
         score=0;
 
-        bodyText.setText(body);
+        bodyText.setText(body.getDesc());
         Log.d("body text 2", "onCreate after setting the body text was: " + body);
-        if(bodyText.getText() == null)
+        if(bodyText.getText() == null) {
             bodyText.setText("IT DIDN'T LOAD LUL");
-    }
+        }
 
+        displayQuiz();
+    }
 
 
     private void WireWidgets() {
@@ -48,20 +51,19 @@ public class LessonOneRecyclerViewDetails extends AppCompatActivity {
         d = (Button) findViewById(R.id.button_d);
     }
 
-
+    private void displayQuiz() {
+        question.setText(body.getQuestion().getAnswerA());
+        Log.d("question 2", "getQuestion: " + body.getQuestion().getAnswerA());
+    }
 
     private void incorrect() {
         score--;
-        Toast.makeText(this, "NICE TRY, BUT NOT NICE ENOUGH", Toast.LENGTH_SHORT).show();
-
-
+        Toast.makeText(this, "NICE TRY LUL", Toast.LENGTH_SHORT).show();
     }
 
     private void correct() {
         score++;
-        Toast.makeText(this, "YOU DID IT", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "YOU DID IT! :D", Toast.LENGTH_SHORT).show();
     }
-
-
 
 }

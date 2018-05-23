@@ -72,8 +72,8 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.MyViewHolder> 
             constraintLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(view.getContext(), LessonOneRecyclerViewDetails.class);
-                    i.putExtra("background info", languageCards.get(getAdapterPosition()).getDesc());
+                    Intent i = new Intent(view.getContext(), RecyclerViewDetails.class);
+                    i.putExtra("background info", languageCards.get(getAdapterPosition()));
                     context.startActivity(i);
                 }
             });
