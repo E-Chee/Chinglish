@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 public class LessonOneActivity extends AppCompatActivity {
+
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private WordAdapter adapter;
@@ -19,7 +20,7 @@ public class LessonOneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson_one);
+        setContentView(R.layout.activity_lesson_four);
 
         //wire widgets
         wireWidgets();

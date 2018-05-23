@@ -30,13 +30,13 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ConversationFlashcardActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".LessonOneActivity"
+        <activity android:name=".LessonFourActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".LessonTwoActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".LessonThreeActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".LessonFourActivity"
+        <activity android:name=".LessonOneActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".LessonFiveActivity"
             android:screenOrientation="portrait"/>

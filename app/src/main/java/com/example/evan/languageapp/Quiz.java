@@ -10,7 +10,7 @@ import java.util.List;
  * Created by per6 on 5/21/18.
  */
 
-public class Question implements Parcelable {
+public class Quiz implements Parcelable {
     private String question;
     private String answerA;
     private String answerB;
@@ -66,7 +66,7 @@ public class Question implements Parcelable {
         this.correctAnswer = correctAnswer;
     }
 
-    public Question(String question, String answerA, String answerB, String answerC, String answerD, String correctAnswer) {
+    public Quiz(String question, String answerA, String answerB, String answerC, String answerD, String correctAnswer) {
         this.question = question;
         this.answerA = answerA;
         this.answerB = answerB;
@@ -75,37 +75,38 @@ public class Question implements Parcelable {
         this.correctAnswer = correctAnswer;
     }
 
-    public static List<Question> generateLessonOneQuestions() {
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
-        return questions;
+    public static List<Quiz> generateLessonOneQuestions() {
+        List<Quiz> quizzes = new ArrayList<>();
+        quizzes.add(new Quiz("What is the character for wǒ?", "你", "我", "嗎", "是", "B"));
+        quizzes.add(new Quiz("What is the difference between 我 and 你?", "你 means you and 我 means me","你 means me and 我 means you","你 can mean me or you but in singular form while 我 is the plural form", "你 is the plural form of me or you while 我 is the singular form","A"));
+        return quizzes;
     }
 
-    public static List<Question> generateLessonTwoQuestions() {
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
-        return questions;
+    public static List<Quiz> generateLessonTwoQuestions() {
+        List<Quiz> quizzes = new ArrayList<>();
+        quizzes.add(new Quiz("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
+        return quizzes;
     }
 
-    public static List<Question> generateLessonThreeQuestions() {
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
-        return questions;
+    public static List<Quiz> generateLessonThreeQuestions() {
+        List<Quiz> quizzes = new ArrayList<>();
+        quizzes.add(new Quiz("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
+        return quizzes;
     }
 
-    public static List<Question> generateLessonFourQuestions() {
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
-        return questions;
+    public static List<Quiz> generateLessonFourQuestions() {
+        List<Quiz> quizzes = new ArrayList<>();
+        quizzes.add(new Quiz("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
+        return quizzes;
     }
 
-    public static List<Question> generateLessonFiveQuestions() {
-        List<Question> questions = new ArrayList<>();
-        questions.add(new Question("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
-        return questions;
+    public static List<Quiz> generateLessonFiveQuestions() {
+        List<Quiz> quizzes = new ArrayList<>();
+        quizzes.add(new Quiz("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
+        return quizzes;
     }
 
-    protected Question(Parcel in) {
+    protected Quiz(Parcel in) {
         question = in.readString();
         answerA = in.readString();
         answerB = in.readString();
@@ -130,15 +131,15 @@ public class Question implements Parcelable {
     }
 
     @SuppressWarnings("unused")
-    public static final Parcelable.Creator<Question> CREATOR = new Parcelable.Creator<Question>() {
+    public static final Parcelable.Creator<Quiz> CREATOR = new Parcelable.Creator<Quiz>() {
         @Override
-        public Question createFromParcel(Parcel in) {
-            return new Question(in);
+        public Quiz createFromParcel(Parcel in) {
+            return new Quiz(in);
         }
 
         @Override
-        public Question[] newArray(int size) {
-            return new Question[size];
+        public Quiz[] newArray(int size) {
+            return new Quiz[size];
         }
     };
 }

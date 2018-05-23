@@ -52,8 +52,12 @@ public class RecyclerViewDetails extends AppCompatActivity {
     }
 
     private void displayQuiz() {
-        question.setText(body.getQuestion().getAnswerA());
-        Log.d("question 2", "getQuestion: " + body.getQuestion().getAnswerA());
+        question.setText(body.getQuiz().getQuestion());
+        answerA.setText(body.getQuiz().getAnswerA());
+        answerB.setText(body.getQuiz().getAnswerB());
+        answerC.setText(body.getQuiz().getAnswerC());
+        answerD.setText(body.getQuiz().getAnswerD());
+        Log.d("question 2", "getQuiz: " + body.getQuiz().getAnswerA());
     }
 
     private void incorrect() {

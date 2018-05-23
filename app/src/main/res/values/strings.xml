@@ -16,7 +16,7 @@
     <string name="lesson_1_card_1">This here is an interesting phrase. "Ni means you", and "hao" means good. However, when you put these two together, you get hello. This provides some interesting insight into Chinese culture. Imagine a world where you say, “You are good” instead of saying hi. Kind of strange isn’t it?</string>
     <string name="lesson_1_card_2">In Chinese, hǎo can mean many things, though most commonly, good. In this case however, hǎo becomes an adverb which modifies the word after it, jiǔ. Jiǔ means long and bùjiàn literally means no see. So when hǎo modifies jiǔ, it means very, resulting in the phrase meaning, “long time no see”.</string>
     <string name="lesson_1_card_3">This one is pretty straight forward. Zǎoshang means morning and just like in “hello”, hao means good.</string>
-    <string name="lesson_1_card_4">Just like the other phrases, nǐ means “you” and hǎo means “good”. The ma in this phrase is a word used to indicate a question. When you put it all together, you get “You good?” or more accurately, “How are you?”</string>
+    <string name="lesson_1_card_4">Just like the other phrases, nǐ means “you” and hǎo means “good”. The ma in this phrase is a word used to indicate a quiz. When you put it all together, you get “You good?” or more accurately, “How are you?”</string>
     <string name="lesson_1_card_5">The character wǒ means I or me and hén means very. When putting it together, you get “I’m very good” or “I’m great”.</string>
     <string name="lesson_1_card_6">Hái means “or” or “also” and kěyǐ means “ok” or “can” but combined together, these three words mean “alright” or “so-so”.</string>
     <string name="lesson_1_card_7">The word bù/bú means “no” or “not”, so Wǒ bù hǎo means “I’m not good.”</string>
@@ -27,13 +27,13 @@
     <string name="lesson_4_card_2">Nǐ means “you”. An example is the phrase Nǐ hěn hǎo or “You’re great!”</string>
     <string name="lesson_4_card_3">Hé means “and”; it is used to connect multiple nouns. For example, Wǒ hé nǐ means “me and you”.</string>
     <string name="lesson_4_card_4">De is a word used to show possession and functions similarly to the “ ‘s” we see in English. An example is Wǒ de péngyǒu or “my friend”.</string>
-    <string name="lesson_4_card_5">Ma is a word used to indicate a question like in the phrase nǐ hǎo ma?</string>
+    <string name="lesson_4_card_5">Ma is a word used to indicate a quiz like in the phrase nǐ hǎo ma?</string>
     <string name="lesson_4_card_6">Bù/bú both mean “no” or “not”.</string>
     <string name="lesson_4_card_7">Shì means “is”, “are”, or “am”. However, when saying “You are good” do not include “shì”. It’s grammatically correct to say Nǐ hěn hǎo not Nǐ shì hǎo.</string>
     <string name="lesson_4_card_8">The word yě means “also” and can be used to add on to a phrase.</string>
     <string name="lesson_4_card_9">Dé shows the degree of an adjective.</string>
     <string name="lesson_4_card_10">De is an auxiliary word that is used after a verb.</string>
-    <string name="lesson_5_card_1">Shìde means “yes” or “yeah” and can be used to reply to yes or no questions.</string>
+    <string name="lesson_5_card_1">Shìde means “yes” or “yeah” and can be used to reply to yes or no quizzes.</string>
     <string name="lesson_5_card_2">Búshì means “no” or “nope”. The word bú gives you a hint at the meaning since is means “no” or “not”</string>
     <string name="lesson_5_card_3">The phrase xǐhuān means like. For example, Wǒ xǐhuān nǐ means “I like you”.</string>
     <string name="lesson_5_card_4">The phrase xièxiè means “thank you” or “thanks”. For a more formal thank you, say xièxiè nǐ.</string>
