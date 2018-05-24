@@ -79,6 +79,14 @@ public class Quiz implements Parcelable {
         List<Quiz> quizzes = new ArrayList<>();
         quizzes.add(new Quiz("What is the character for wǒ?", "你", "我", "嗎", "是", "B"));
         quizzes.add(new Quiz("What is the difference between 我 and 你?", "你 means you and 我 means me","你 means me and 我 means you","你 can mean me or you but in singular form while 我 is the plural form", "你 is the plural form of me or you while 我 is the singular form","A"));
+        quizzes.add(new Quiz("In a sentence listing three nouns, how many 和s would there be?","1","2","3","4","A"));
+        quizzes.add(new Quiz("If you were to translate the phrase \"Tom's cat\", where would the \"的\" go?","Before \"Tom\"","After \"Tom\"","After \"cat\"","None of the above","B"));
+        quizzes.add(new Quiz("Which of the following is the correct placement of \"嗎\" in a question?","你嗎好","嗎你好","嗎你好嗎","你好嗎","D"));
+        quizzes.add(new Quiz("","","","","",""));
+        quizzes.add(new Quiz("","","","","",""));
+        quizzes.add(new Quiz("","","","","",""));
+        quizzes.add(new Quiz("","","","","",""));
+        quizzes.add(new Quiz("","","","","",""));
         return quizzes;
     }
 

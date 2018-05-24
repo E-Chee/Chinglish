@@ -69,9 +69,9 @@ public class LanguageCard implements Parcelable{
 
     public static List<LanguageCard> getLessonFourCards(Context context) {
         ArrayList<LanguageCard> lessonOneCards = new ArrayList<LanguageCard>();
-        List<Quiz> quizzes = Quiz.generateLessonOneQuestions();
+        List<Quiz> quizzes = Quiz.generateLessonFourQuestions();
         lessonOneCards.add(new LanguageCard("你好", "Nǐ hǎo", "Hello", context.getString(R.string.lesson_1_card_1), quizzes.get(0)));
-        lessonOneCards.add(new LanguageCard("好久不見", "Hǎojiǔ bùjiàn", "Long time no see", context.getString(R.string.lesson_1_card_2), quizzes.get(1)));
+//        lessonOneCards.add(new LanguageCard("好久不見", "Hǎojiǔ bùjiàn", "Long time no see", context.getString(R.string.lesson_1_card_2), quizzes.get(1)));
 //        lessonOneCards.add(new LanguageCard("早上好", "Zǎoshàng hǎo", "Good morning", context.getString(R.string.lesson_1_card_3), quizzes.get(2)));
 //        lessonOneCards.add(new LanguageCard("你好嗎", "Nǐ hǎo ma", "How are you?", context.getString(R.string.lesson_1_card_4), quizzes.get(3)));
 //        lessonOneCards.add(new LanguageCard("我很好", "Wǒ hěn hǎo", "I'm great", context.getString(R.string.lesson_1_card_5), quizzes.get(4)));
@@ -125,17 +125,17 @@ public class LanguageCard implements Parcelable{
 
     public static List<LanguageCard> getLessonOneCards(Context context) {
         ArrayList<LanguageCard> lessonFourCards = new ArrayList<LanguageCard>();
-        List<Quiz> quizzes = Quiz.generateLessonFourQuestions();
+        List<Quiz> quizzes = Quiz.generateLessonOneQuestions();
         lessonFourCards.add(new LanguageCard("我", "wǒ", "I",context.getString(R.string.lesson_4_card_1), quizzes.get(0)));
-//        lessonFourCards.add(new LanguageCard("你", "nǐ", "you",context.getString(R.string.lesson_4_card_2), quizzes.get(1)));
-//        lessonFourCards.add(new LanguageCard("和", "hé", "and",context.getString(R.string.lesson_4_card_3), quizzes.get(2)));
-//        lessonFourCards.add(new LanguageCard("的", "de", "a word showing possession",context.getString(R.string.lesson_4_card_4), quizzes.get(3)));
-//        lessonFourCards.add(new LanguageCard("嗎", "ma", "a word indicating a quiz",context.getString(R.string.lesson_4_card_5), quizzes.get(4)));
-//        lessonFourCards.add(new LanguageCard("不", "bù/bú", "no / not",context.getString(R.string.lesson_4_card_6), quizzes.get(5)));
-//        lessonFourCards.add(new LanguageCard("是", "shì", "is / am / are",context.getString(R.string.lesson_4_card_7), quizzes.get(6)));
-//        lessonFourCards.add(new LanguageCard("也", "yě", "also",context.getString(R.string.lesson_4_card_8), quizzes.get(7)));
-//        lessonFourCards.add(new LanguageCard("得", "dé", "shows degree",context.getString(R.string.lesson_4_card_9), quizzes.get(8)));
-//        lessonFourCards.add(new LanguageCard("得", "de", "auxiliary verb / used after a verb",context.getString(R.string.lesson_4_card_10), quizzes.get(9)));
+        lessonFourCards.add(new LanguageCard("你", "nǐ", "you",context.getString(R.string.lesson_4_card_2), quizzes.get(1)));
+        lessonFourCards.add(new LanguageCard("和", "hé", "and",context.getString(R.string.lesson_4_card_3), quizzes.get(2)));
+        lessonFourCards.add(new LanguageCard("的", "de", "a word showing possession",context.getString(R.string.lesson_4_card_4), quizzes.get(3)));
+        lessonFourCards.add(new LanguageCard("嗎", "ma", "a word indicating a quiz",context.getString(R.string.lesson_4_card_5), quizzes.get(4)));
+        lessonFourCards.add(new LanguageCard("不", "bù/bú", "no / not",context.getString(R.string.lesson_4_card_6), quizzes.get(5)));
+        lessonFourCards.add(new LanguageCard("是", "shì", "is / am / are",context.getString(R.string.lesson_4_card_7), quizzes.get(6)));
+        lessonFourCards.add(new LanguageCard("也", "yě", "also",context.getString(R.string.lesson_4_card_8), quizzes.get(7)));
+        lessonFourCards.add(new LanguageCard("得", "dé", "shows degree",context.getString(R.string.lesson_4_card_9), quizzes.get(8)));
+        lessonFourCards.add(new LanguageCard("得", "de", "auxiliary verb / used after a verb",context.getString(R.string.lesson_4_card_10), quizzes.get(9)));
         return lessonFourCards;
     }
 
