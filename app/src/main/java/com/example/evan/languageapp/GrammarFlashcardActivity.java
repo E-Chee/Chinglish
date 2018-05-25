@@ -26,7 +26,9 @@ public class GrammarFlashcardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_grammar_flashcard);
+
 
         words = new ArrayList<>();
         words.addAll(VocabGenerator.getGrammar());
