@@ -82,11 +82,11 @@ public class Quiz implements Parcelable {
         quizzes.add(new Quiz("In a sentence listing three nouns, how many 和s would there be?","1","2","3","4","A"));
         quizzes.add(new Quiz("If you were to translate the phrase \"Tom's cat\", where would the \"的\" go?","Before \"Tom\"","After \"Tom\"","After \"cat\"","None of the above","B"));
         quizzes.add(new Quiz("Which of the following is the correct placement of \"嗎\" in a question?","你嗎好","嗎你好","嗎你好嗎","你好嗎","D"));
-        quizzes.add(new Quiz("","","","","",""));
-        quizzes.add(new Quiz("","","","","",""));
-        quizzes.add(new Quiz("","","","","",""));
-        quizzes.add(new Quiz("","","","","",""));
-        quizzes.add(new Quiz("","","","","",""));
+        quizzes.add(new Quiz("Which of these characters is not a noun?","我","她","他","是","D"));
+        quizzes.add(new Quiz("Which of the following phrases don't make any sense?","是的","是嗎","是你","是不","C"));
+        quizzes.add(new Quiz("Which phrase says \"He and I\"","他和我","她和我","也和我","我和她","A"));
+        quizzes.add(new Quiz("Which of these words has two tones for the same definition?","好","你","她","不","D"));
+        quizzes.add(new Quiz("What is the function of the character \"和\"?","connect adjective","connect nouns","both a and b","none of the above","B"));
         return quizzes;
     }
 
