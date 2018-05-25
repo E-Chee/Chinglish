@@ -49,13 +49,13 @@ public class PinyinAdapter extends RecyclerView.Adapter<PinyinAdapter.MyViewHold
         //one. get the object at the position form the list
         final LanguageCard languageCard = this.languageCards.get(position);
         //set the textviews/widgets in the viewholder
-        holder.tone.setText(languageCard.getTone());
-        holder.explanation.setText(languageCard.getExplanation());
+//        holder.tone.setText(languageCard.getTone());
+//        holder.explanation.setText(languageCard.getExplanation());
         holder.audio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MediaPlayer m = MediaPlayer.create(view.getContext(), languageCard.getAudio());
-                m.start();
+//                MediaPlayer m = MediaPlayer.create(view.getContext(), languageCard.getAudio());
+//                m.start();
             }
         });
     }
