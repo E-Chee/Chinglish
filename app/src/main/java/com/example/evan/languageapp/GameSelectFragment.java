@@ -199,7 +199,7 @@ public class GameSelectFragment extends Fragment implements View.OnClickListener
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.button_easy:
-                Intent i = new Intent(getActivity(), MatchEasyActivity.class);
+                Intent i = new Intent(getActivity(), MatchEasyTwo.class);
                 //sends easyTerms array of Gamecards to easy activity
                 i.putParcelableArrayListExtra("easy", easyTerms);
                 startActivity(i);

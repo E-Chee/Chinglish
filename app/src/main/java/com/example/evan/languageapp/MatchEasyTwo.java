@@ -8,15 +8,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.GridLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MatchEasyTwo extends AppCompatActivity implements View.OnClickListener{
 
     private int numElements;
     private String[] cardTexts;
-    private Flashcard[] easyTerms;
+    private List<Gamecard> easyTerms;
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private WordAdapter adapter;
+    private GameWordAdapter adapter;
 
 
     @Override
@@ -31,7 +34,7 @@ public class MatchEasyTwo extends AppCompatActivity implements View.OnClickListe
         int numRows = gridLayout.getRowCount();
         numElements = numColumns * numRows;
 
-        easyTerms = (Flashcard[]) getIntent().getParcelableArrayExtra("easyTerms");
+        easyTerms = (ArrayList<Gamecard>) getIntent().getParcelableArrayExtra("easyTerms");
 
         //create a layout manager for the recyclerview
         layoutManager = new LinearLayoutManager(this);
@@ -40,8 +43,8 @@ public class MatchEasyTwo extends AppCompatActivity implements View.OnClickListe
         //set the default animator to the recyclerview
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         //create the adapter
-        initRecyclerView();
-        adapter = new WordAdapter(this, results);
+        //initRecyclerView();
+        adapter = new GameWordAdapter(this, easyTerms);
         //set the adapter
         recyclerView.setAdapter(adapter);
 
@@ -51,9 +54,9 @@ public class MatchEasyTwo extends AppCompatActivity implements View.OnClickListe
         recyclerView = findViewById(R.id.recycler_view);
     }
 
-    private void initRecyclerView() {
-        results = LanguageCard.getLessonOneCards(this);
-    }
+    //private void initRecyclerView() {
+    //    easyTerms = Gamecard.getLessonOneCards(this);
+    //}
 
     @Override
     public void onClick(View v) {
