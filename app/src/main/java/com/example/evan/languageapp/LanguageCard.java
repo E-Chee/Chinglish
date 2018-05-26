@@ -95,15 +95,16 @@ public class LanguageCard implements Parcelable{
         ArrayList<LanguageCard> lessonTwoCards = new ArrayList<LanguageCard>();
         List<Quiz> quizzes = Quiz.generateLessonTwoQuestions();
         lessonTwoCards.add(new LanguageCard("一", "yī", "one", "", quizzes.get(0)));
-//        lessonTwoCards.add(new LanguageCard("二", "èr", "two","", quizzes.get(1)));
-//        lessonTwoCards.add(new LanguageCard("三", "sān", "three","", quizzes.get(2)));
-//        lessonTwoCards.add(new LanguageCard("四", "sì", "four","", quizzes.get(3)));
-//        lessonTwoCards.add(new LanguageCard("五", "wǔ", "five","", quizzes.get(4)));
-//        lessonTwoCards.add(new LanguageCard("六", "liù", "six","", quizzes.get(5)));
-//        lessonTwoCards.add(new LanguageCard("七", "qī", "seven","", quizzes.get(6)));
-//        lessonTwoCards.add(new LanguageCard("八", "bā", "eight","", quizzes.get(7)));
-//        lessonTwoCards.add(new LanguageCard("九", "jiǔ", "nine","", quizzes.get(8)));
-//        lessonTwoCards.add(new LanguageCard("十", "shí", "ten","", quizzes.get(9)));
+        lessonTwoCards.add(new LanguageCard("二", "èr", "two","", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("三", "sān", "three","", quizzes.get(1)));
+        lessonTwoCards.add(new LanguageCard("四", "sì", "four","", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("五", "wǔ", "five","", quizzes.get(4)));
+        lessonTwoCards.add(new LanguageCard("六", "liù", "six","", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("七", "qī", "seven","", quizzes.get(2)));
+        lessonTwoCards.add(new LanguageCard("八", "bā", "eight","", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("九", "jiǔ", "nine","", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("十", "shí", "ten","", quizzes.get(3)));
+        lessonTwoCards.add(new LanguageCard("百","bǎi","hundred","", quizzes.get(6)));
         return lessonTwoCards;
     }
 
