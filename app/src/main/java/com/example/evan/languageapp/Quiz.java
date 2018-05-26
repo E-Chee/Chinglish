@@ -92,7 +92,13 @@ public class Quiz implements Parcelable {
 
     public static List<Quiz> generateLessonTwoQuestions() {
         List<Quiz> quizzes = new ArrayList<>();
-        quizzes.add(new Quiz("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
+        quizzes.add(new Quiz("No quiz for this question!","","","","",""));
+        quizzes.add(new Quiz("How do you count to three?", "一二三", "一二三", "一一一", "三二一", "A"));
+        quizzes.add(new Quiz("What is 7 in Chinese?","六","九","七","八","B"));
+        quizzes.add(new Quiz("What is 33 in Chinese?","三三","三十三","三三十","三三三","B"));
+        quizzes.add(new Quiz("What does 3 + 2 in Chinese?","五","三二","八","十","A"));
+        quizzes.add(new Quiz("What is 20 in Chinese?","二十","十二","三十","二零","A"));
+        quuizzes.add(new Quiz("What is 101 in Chinese?","一零一","十十一","一十一","一百一","D"));
         return quizzes;
     }
 
