@@ -104,7 +104,11 @@ public class Quiz implements Parcelable {
 
     public static List<Quiz> generateLessonThreeQuestions() {
         List<Quiz> quizzes = new ArrayList<>();
-        quizzes.add(new Quiz("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
+        quizzes.add(new Quiz("What is the definition for 色?", "Hue", "Color", "Not really a definition for it", "Hello World!", "B"));
+        quizzes.add(new Quiz("Which of the following means blue?", "紅色", "綠色", "藍色", "黑色", "C"));
+        quizzes.add(new Quiz("Which of the following means orange?", "橙色", "紫色", "紅色", "黃色", "A"));
+        quizzes.add(new Quiz("What does 綠色 mean?", "Red", "Yellow", "Purple", "Green", "D"));
+        quizzes.add(new Quiz("which of the following is NOT a correct statement about 黑色, 白色, or 灰色?", "黑色 is black", "白色 is white", "灰色 is gray", "灰色 is black", "D"));
         return quizzes;
     }
 
