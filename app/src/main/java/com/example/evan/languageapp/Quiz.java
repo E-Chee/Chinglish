@@ -130,7 +130,15 @@ public class Quiz implements Parcelable {
 
     public static List<Quiz> generateLessonFiveQuestions() {
         List<Quiz> quizzes = new ArrayList<>();
-        quizzes.add(new Quiz("What is a door?", "an entryway", "a thing to smash", "blah", "blahblah", "blah"));
+        quizzes.add(new Quiz("Which phrase can you say to respond to a yes or no question?", "喜歡", "我愛你", "是的", "對不起", "C"));
+        quizzes.add(new Quiz("How do you say \"I like you\"?", "我喜歡你", "我不喜歡你", "我愛你", "我很好", "A"));
+        quizzes.add(new Quiz("What does the phrase 不是 mean?", "no", "not", "yes", "like", "A"));
+        quizzes.add(new Quiz("what is a formal way to say thank you?", "不客氣", "謝謝你", "謝謝我", "謝謝謝", "B"));
+        quizzes.add(new Quiz("Which of these phrases means \"manners\"?", "關係", "對不起", "可以", "客氣", "D"));
+        quizzes.add(new Quiz("How do you say \"sorry\"?", "對不起", "我對不起", "沒關係", "我沒關係", "A"));
+        quizzes.add(new Quiz("How would you introduce yourself?", "我叫_", "你好_", "我好_", "我不_", "A"));
+        quizzes.add(new Quiz("How do you say \"I know\"?", "不是都走", "我知道", "是的", "我很好", "B"));
+        quizzes.add(new Quiz("What is a way in which you can show affection for someone?", "我愛你", "我不喜歡你", "你不好", "我不知道", "A"));
         return quizzes;
     }
 
