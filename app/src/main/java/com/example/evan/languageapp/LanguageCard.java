@@ -94,6 +94,7 @@ public class LanguageCard implements Parcelable{
     public static List<LanguageCard> getLessonTwoCards() {
         ArrayList<LanguageCard> lessonTwoCards = new ArrayList<LanguageCard>();
         List<Quiz> quizzes = Quiz.generateLessonTwoQuestions();
+        lessonTwoCards.add(new LanuageCard("零 or O", "líng", "zero", "", quizzes.get(0)));
         lessonTwoCards.add(new LanguageCard("一", "yī", "one", "", quizzes.get(0)));
         lessonTwoCards.add(new LanguageCard("二", "èr", "two","", quizzes.get(0)));
         lessonTwoCards.add(new LanguageCard("三", "sān", "three","", quizzes.get(1)));
@@ -111,16 +112,16 @@ public class LanguageCard implements Parcelable{
     public static List<LanguageCard> getLessonThreeCards() {
         ArrayList<LanguageCard> lessonThreeCards = new ArrayList<LanguageCard>();
         List<Quiz> quizzes = Quiz.generateLessonThreeQuestions();
-        lessonThreeCards.add(new LanguageCard("紅色", "Hóngsè", "red","", quizzes.get(0)));
-//        lessonThreeCards.add(new LanguageCard("藍色", "Lán sè", "blue","", quizzes.get(1)));
-//        lessonThreeCards.add(new LanguageCard("黃色", "Huángsè", "yellow","", quizzes.get(2)));
-//        lessonThreeCards.add(new LanguageCard("綠色", "Lǜsè", "green","", quizzes.get(3)));
-//        lessonThreeCards.add(new LanguageCard("橙色", "Chéngsè", "orange","", quizzes.get(4)));
-//        lessonThreeCards.add(new LanguageCard("紫色", "Zǐsè", "purple","", quizzes.get(5)));
-//        lessonThreeCards.add(new LanguageCard("棕色", "Zōngsè", "brown","", quizzes.get(6)));
-//        lessonThreeCards.add(new LanguageCard("黑色", "Hēisè", "black","", quizzes.get(7)));
-//        lessonThreeCards.add(new LanguageCard("白色", "Báisè", "white","", quizzes.get(8)));
-//        lessonThreeCards.add(new LanguageCard("灰色", "Huīsè", "gray","", quizzes.get(9)));
+       lessonThreeCards.add(new LanguageCard("紅色", "Hóngsè", "red","", quizzes.get(1)));
+       lessonThreeCards.add(new LanguageCard("藍色", "Lán sè", "blue","", quizzes.get(2)));
+       lessonThreeCards.add(new LanguageCard("黃色", "Huángsè", "yellow","", quizzes.get(0)));
+       lessonThreeCards.add(new LanguageCard("綠色", "Lǜsè", "green","", quizzes.get(4)));
+       lessonThreeCards.add(new LanguageCard("橙色", "Chéngsè", "orange","", quizzes.get(3)));
+       lessonThreeCards.add(new LanguageCard("紫色", "Zǐsè", "purple","", quizzes.get(0)));
+       lessonThreeCards.add(new LanguageCard("棕色", "Zōngsè", "brown","", quizzes.get(0)));
+       lessonThreeCards.add(new LanguageCard("黑色", "Hēisè", "black","", quizzes.get(0)));
+       lessonThreeCards.add(new LanguageCard("白色", "Báisè", "white","", quizzes.get(0)));
+       lessonThreeCards.add(new LanguageCard("灰色", "Huīsè", "gray","", quizzes.get(5)));
         return lessonThreeCards;
     }
 
