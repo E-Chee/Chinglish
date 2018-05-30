@@ -20,7 +20,8 @@ public class LanguageCard implements Parcelable{
     private String desc;
     private Quiz quiz;
 
-    private String tone, explanation;
+    private String tone;
+    private String explanation;
     private int audio;
 
     public int getAudio() {
@@ -54,6 +55,8 @@ public class LanguageCard implements Parcelable{
         this.english = english;
         this.pinyin = pinyin;
         this.chinese = chinese;
+        this.quiz = quiz;
+        this.desc = desc;
     }
 
     public LanguageCard(String tone, String explanation, int audio) {
@@ -100,6 +103,15 @@ public class LanguageCard implements Parcelable{
         return chinese + pinyin + english;
     }
 
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+
     public static List<LanguageCard> getLessonFourCards(Context context) {
         ArrayList<LanguageCard> lessonOneCards = new ArrayList<LanguageCard>();
         List<Quiz> quizzes = Quiz.generateLessonFourQuestions();
@@ -114,14 +126,6 @@ public class LanguageCard implements Parcelable{
        lessonOneCards.add(new LanguageCard("明天見", "Míngtiān jiàn", "See you tomorrow", context.getString(R.string.lesson_1_card_9), quizzes.get(8)));
        lessonOneCards.add(new LanguageCard("晚安", "Wǎn'ān", "Good night",context.getString(R.string.lesson_1_card_10), quizzes.get(9)));
         return lessonOneCards;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
     }
 
     public static List<LanguageCard> getLessonTwoCards() {
@@ -200,6 +204,17 @@ public class LanguageCard implements Parcelable{
         return pinyinCards;
     }
 
+    protected LanguageCard(Parcel in) {
+        english = in.readString();
+        pinyin = in.readString();
+        chinese = in.readString();
+        desc = in.readString();
+        quiz = (Quiz) in.readValue(Quiz.class.getClassLoader());
+        tone = in.readString();
+        explanation = in.readString();
+        audio = in.readInt();
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -212,7 +227,22 @@ public class LanguageCard implements Parcelable{
         dest.writeString(chinese);
         dest.writeString(desc);
         dest.writeValue(quiz);
+        dest.writeString(tone);
+        dest.writeString(explanation);
+        dest.writeInt(audio);
     }
 
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<LanguageCard> CREATOR = new Parcelable.Creator<LanguageCard>() {
+        @Override
+        public LanguageCard createFromParcel(Parcel in) {
+            return new LanguageCard(in);
+        }
+
+        @Override
+        public LanguageCard[] newArray(int size) {
+            return new LanguageCard[size];
+        }
+    };
 
 }
