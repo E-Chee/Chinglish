@@ -52,6 +52,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".PinyinLessonActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".MatchEasyTwo" />
+        <activity android:name=".GameWordAdapter"></activity>
     </application>
 
 </manifest>

@@ -31,7 +31,9 @@ public class MatchEasyActivity extends AppCompatActivity implements View.OnClick
         int numRows = gridLayout.getRowCount();
         numElements = numColumns * numRows;
 
+        //storage
         storedButtons = new MemoryButton[numElements];
+
         //what goes on each button
         buttonTexts = new String[numElements];
 

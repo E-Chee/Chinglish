@@ -1,7 +1,6 @@
 package com.example.evan.languageapp;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
