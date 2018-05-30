@@ -24,6 +24,29 @@ public class LanguageCard implements Parcelable{
     private String explanation;
     private int audio;
 
+    protected LanguageCard(Parcel in) {
+        english = in.readString();
+        pinyin = in.readString();
+        chinese = in.readString();
+        desc = in.readString();
+        quiz = in.readParcelable(Quiz.class.getClassLoader());
+        tone = in.readString();
+        explanation = in.readString();
+        audio = in.readInt();
+    }
+
+    public static final Creator<LanguageCard> CREATOR = new Creator<LanguageCard>() {
+        @Override
+        public LanguageCard createFromParcel(Parcel in) {
+            return new LanguageCard(in);
+        }
+
+        @Override
+        public LanguageCard[] newArray(int size) {
+            return new LanguageCard[size];
+        }
+    };
+
     public int getAudio() {
         return audio;
     }
@@ -47,8 +70,6 @@ public class LanguageCard implements Parcelable{
     public void setExplanation(String explanation) {
         this.explanation = explanation;
     }
-
-
 
 
     public LanguageCard(String chinese, String pinyin, String english, String desc, Quiz quiz) {
