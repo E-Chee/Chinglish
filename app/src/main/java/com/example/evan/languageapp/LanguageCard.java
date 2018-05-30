@@ -20,13 +20,46 @@ public class LanguageCard implements Parcelable{
     private String desc;
     private Quiz quiz;
 
+    private String tone, explanation;
+    private int audio;
+
+    public int getAudio() {
+        return audio;
+    }
+
+    public void setAudio(int audio) {
+        this.audio = audio;
+    }
+
+    public String getTone() {
+        return tone;
+    }
+
+    public void setTone(String tone) {
+        this.tone = tone;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
+    }
+
+
+
 
     public LanguageCard(String chinese, String pinyin, String english, String desc, Quiz quiz) {
         this.english = english;
         this.pinyin = pinyin;
         this.chinese = chinese;
-        this.desc = desc;
-        this.quiz = quiz;
+    }
+
+    public LanguageCard(String tone, String explanation, int audio) {
+        this.tone = tone;
+        this.explanation = explanation;
+        this.audio = audio;
     }
 
     public String getEnglish() {
@@ -157,12 +190,14 @@ public class LanguageCard implements Parcelable{
         return lessonFiveCards;
     }
 
-    protected LanguageCard(Parcel in) {
-        english = in.readString();
-        pinyin = in.readString();
-        chinese = in.readString();
-        desc = in.readString();
-        quiz = (Quiz) in.readValue(Quiz.class.getClassLoader());
+    public static List<LanguageCard> getPinyinCards(Context context){
+        ArrayList<LanguageCard> pinyinCards= new ArrayList<LanguageCard>();
+        pinyinCards.add(new LanguageCard("1st Tone", "Flat tone is marked with a line over a vowel such as \"a\" + \"-\" = \"ā\".", R.raw.one));
+        pinyinCards.add(new LanguageCard("2nd Tone", "Rising tone is marked with a rising line over a vowel such as \"a\" + \"´\" = \"á\".", R.raw.two));
+        pinyinCards.add(new LanguageCard("3rd Tone", "Falling-rising tone is marked with a hook over a vowel such as \"a\" + \"v\" = \"ă\"", R.raw.three));
+        pinyinCards.add(new LanguageCard("4th Tone", "Falling tone is marked with a falling line over a vowel such as \"a\" + \"`\" = \"à\".", R.raw.four));
+        pinyinCards.add(new LanguageCard("Neutral Tone", "Also called toneless tone (called “light sound” in Chinese), no marking is put above any vowel. For example, \"a\" + \" \" = \"a\".", R.raw.four));
+        return pinyinCards;
     }
 
     @Override
@@ -179,16 +214,5 @@ public class LanguageCard implements Parcelable{
         dest.writeValue(quiz);
     }
 
-    @SuppressWarnings("unused")
-    public static final Parcelable.Creator<LanguageCard> CREATOR = new Parcelable.Creator<LanguageCard>() {
-        @Override
-        public LanguageCard createFromParcel(Parcel in) {
-            return new LanguageCard(in);
-        }
 
-        @Override
-        public LanguageCard[] newArray(int size) {
-            return new LanguageCard[size];
-        }
-    };
 }

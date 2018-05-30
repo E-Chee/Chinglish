@@ -45,6 +45,6 @@ public class PinyinLessonActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-//        results = LanguageCard.getPinyinCards(this);
+        results = LanguageCard.getPinyinCards(this);
     }
 }
