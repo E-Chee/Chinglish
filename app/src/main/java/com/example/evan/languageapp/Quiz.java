@@ -98,7 +98,7 @@ public class Quiz implements Parcelable {
         quizzes.add(new Quiz("What is 33 in Chinese?","三三","三十三","三三十","三三三","B"));
         quizzes.add(new Quiz("What does 3 + 2 in Chinese?","五","三二","八","十","A"));
         quizzes.add(new Quiz("What is 20 in Chinese?","二十","十二","三十","二零","A"));
-        quuizzes.add(new Quiz("What is 101 in Chinese?","一零一","十十一","一十一","一百一","D"));
+        quizzes.add(new Quiz("What is 101 in Chinese?","一零一","十十一","一十一","一百一","D"));
         return quizzes;
     }
 

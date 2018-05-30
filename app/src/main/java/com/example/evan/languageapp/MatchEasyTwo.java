@@ -34,7 +34,7 @@ public class MatchEasyTwo extends AppCompatActivity implements View.OnClickListe
         int numRows = gridLayout.getRowCount();
         numElements = numColumns * numRows;
 
-        easyTerms = (ArrayList<Gamecard>) getIntent().getParcelableArrayExtra("easyTerms");
+        //easyTerms = (ArrayList<Gamecard>) getIntent().getParcelableArrayExtra("easyTerms");
 
         //create a layout manager for the recyclerview
         layoutManager = new LinearLayoutManager(this);

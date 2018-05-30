@@ -127,7 +127,7 @@ public class LanguageCard implements Parcelable{
     public static List<LanguageCard> getLessonTwoCards() {
         ArrayList<LanguageCard> lessonTwoCards = new ArrayList<LanguageCard>();
         List<Quiz> quizzes = Quiz.generateLessonTwoQuestions();
-        lessonTwoCards.add(new LanuageCard("零 or O", "líng", "zero", "", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("零 or O", "líng", "zero", "", quizzes.get(0)));
         lessonTwoCards.add(new LanguageCard("一", "yī", "one", "", quizzes.get(0)));
         lessonTwoCards.add(new LanguageCard("二", "èr", "two","", quizzes.get(0)));
         lessonTwoCards.add(new LanguageCard("三", "sān", "three","", quizzes.get(1)));

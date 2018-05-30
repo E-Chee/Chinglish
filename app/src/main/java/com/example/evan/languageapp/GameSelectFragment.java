@@ -186,7 +186,6 @@ public class GameSelectFragment extends Fragment implements View.OnClickListener
         mediumButton = (Button) getView().findViewById(R.id.button_medium);
         hardButton = (Button) getView().findViewById(R.id.button_hard);
         matchingText = (TextView) getView().findViewById(R.id.text_matching);
-        categoriesText = (TextView) getView().findViewById(R.id.text_categories);
     }
 
     public void setOnClickListeners(){
