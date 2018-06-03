@@ -24,53 +24,6 @@ public class LanguageCard implements Parcelable{
     private String explanation;
     private int audio;
 
-    protected LanguageCard(Parcel in) {
-        english = in.readString();
-        pinyin = in.readString();
-        chinese = in.readString();
-        desc = in.readString();
-        quiz = in.readParcelable(Quiz.class.getClassLoader());
-        tone = in.readString();
-        explanation = in.readString();
-        audio = in.readInt();
-    }
-
-    public static final Creator<LanguageCard> CREATOR = new Creator<LanguageCard>() {
-        @Override
-        public LanguageCard createFromParcel(Parcel in) {
-            return new LanguageCard(in);
-        }
-
-        @Override
-        public LanguageCard[] newArray(int size) {
-            return new LanguageCard[size];
-        }
-    };
-
-    public int getAudio() {
-        return audio;
-    }
-
-    public void setAudio(int audio) {
-        this.audio = audio;
-    }
-
-    public String getTone() {
-        return tone;
-    }
-
-    public void setTone(String tone) {
-        this.tone = tone;
-    }
-
-    public String getExplanation() {
-        return explanation;
-    }
-
-    public void setExplanation(String explanation) {
-        this.explanation = explanation;
-    }
-
 
     public LanguageCard(String chinese, String pinyin, String english, String desc, Quiz quiz) {
         this.english = english;
@@ -132,6 +85,30 @@ public class LanguageCard implements Parcelable{
         this.desc = desc;
     }
 
+    public int getAudio() {
+        return audio;
+    }
+
+    public void setAudio(int audio) {
+        this.audio = audio;
+    }
+
+    public String getTone() {
+        return tone;
+    }
+
+    public void setTone(String tone) {
+        this.tone = tone;
+    }
+
+    public String getExplanation() {
+        return explanation;
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = explanation;
+    }
+
 
     public static List<LanguageCard> getLessonFourCards(Context context) {
         ArrayList<LanguageCard> lessonOneCards = new ArrayList<LanguageCard>();
@@ -149,21 +126,21 @@ public class LanguageCard implements Parcelable{
         return lessonOneCards;
     }
 
-    public static List<LanguageCard> getLessonTwoCards() {
+    public static List<LanguageCard> getLessonTwoCards(Context context) {
         ArrayList<LanguageCard> lessonTwoCards = new ArrayList<LanguageCard>();
         List<Quiz> quizzes = Quiz.generateLessonTwoQuestions();
-        lessonTwoCards.add(new LanguageCard("零 or O", "líng", "zero", "", quizzes.get(0)));
-        lessonTwoCards.add(new LanguageCard("一", "yī", "one", "", quizzes.get(0)));
-        lessonTwoCards.add(new LanguageCard("二", "èr", "two","", quizzes.get(0)));
-        lessonTwoCards.add(new LanguageCard("三", "sān", "three","", quizzes.get(1)));
-        lessonTwoCards.add(new LanguageCard("四", "sì", "four","", quizzes.get(0)));
-        lessonTwoCards.add(new LanguageCard("五", "wǔ", "five","", quizzes.get(4)));
-        lessonTwoCards.add(new LanguageCard("六", "liù", "six","", quizzes.get(0)));
-        lessonTwoCards.add(new LanguageCard("七", "qī", "seven","", quizzes.get(2)));
-        lessonTwoCards.add(new LanguageCard("八", "bā", "eight","", quizzes.get(0)));
-        lessonTwoCards.add(new LanguageCard("九", "jiǔ", "nine","", quizzes.get(0)));
-        lessonTwoCards.add(new LanguageCard("十", "shí", "ten","", quizzes.get(3)));
-        lessonTwoCards.add(new LanguageCard("百","bǎi","hundred","", quizzes.get(6)));
+        lessonTwoCards.add(new LanguageCard("零 or O", "líng", "zero", context.getString(R.string.lesson_2_card_1), quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("一", "yī", "one", "No further info needed for this word!", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("二", "èr", "two", context.getString(R.string.lesson_2_card_3), quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("三", "sān", "three","No further info needed for this word!", quizzes.get(1)));
+        lessonTwoCards.add(new LanguageCard("四", "sì", "four","No further info needed for this word!", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("五", "wǔ", "five","No further info needed for this word!", quizzes.get(4)));
+        lessonTwoCards.add(new LanguageCard("六", "liù", "six","No further info needed for this word!", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("七", "qī", "seven","No further info needed for this word!", quizzes.get(2)));
+        lessonTwoCards.add(new LanguageCard("八", "bā", "eight","No further info needed for this word!", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("九", "jiǔ", "nine","No further info needed for this word!", quizzes.get(0)));
+        lessonTwoCards.add(new LanguageCard("十", "shí", "ten", context.getString(R.string.lesson_2_card_11), quizzes.get(3)));
+        lessonTwoCards.add(new LanguageCard("百","bǎi","hundred",context.getString(R.string.lesson_2_card_12), quizzes.get(6)));
         return lessonTwoCards;
     }
 

@@ -12,48 +12,65 @@
         <activity
             android:name=".HomeScreenActivity"
             android:label="@string/title_activity_home_screen"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GreetingsLessonActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NumbersFlashcardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ColorsFlashcardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".GrammarFlashcardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ConversationFlashcardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LessonFourActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LessonTwoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LessonThreeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LessonOneActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LessonFiveActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".GreetingsFlashcardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".RecyclerViewDetails"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MatchHardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MatchMediumActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MatchEasyActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".PinyinLessonActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".GreetingsLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NumbersFlashcardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ColorsFlashcardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GrammarFlashcardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConversationFlashcardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LessonFourActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LessonTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LessonThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LessonOneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LessonFiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GreetingsFlashcardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecyclerViewDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MatchHardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MatchMediumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MatchEasyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PinyinLessonActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".MatchEasyTwo" />
-        <activity android:name=".GameWordAdapter"></activity>
+        <activity android:name=".GameWordAdapter" />
+        <activity android:name=".EndLessonScreenActivity"></activity>
     </application>
 
 </manifest>

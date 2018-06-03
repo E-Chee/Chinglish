@@ -32,7 +32,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:justificationMode="none"
-        android:text="Welcome to your conversation lesson! This lesson is made to teach you conversational phrases in Chinese! By the end of this lesson you should be able to have learned some basic conversational phrases."
+        android:text="@string/lesson_five_text"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -12,7 +12,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="lesson_one_text">Hello there! Welcome to your first lesson! This first lesson is made to introduce you to the wonderful world of Chinese! We wil explore topics like how to greet different age and friend groups among others. Click on a card to get more details and a quiz.</string>
+    <string name="lesson_four_text">This lesson is the first lesson where we start to add all that we\'ve learned together into actual phrases. We wil explore topics like how to greet different age and friend groups among others. Click on a card to get more details and a quiz.</string>
     <string name="lesson_1_card_1">This here is an interesting phrase. "Ni means you", and "hao" means good. However, when you put these two together, you get hello. This provides some interesting insight into Chinese culture. Imagine a world where you say, “You are good” instead of saying hi. Kind of strange isn’t it?</string>
     <string name="lesson_1_card_2">In Chinese, hǎo can mean many things, though most commonly, good. In this case however, hǎo becomes an adverb which modifies the word after it, jiǔ. Jiǔ means long and bùjiàn literally means no see. So when hǎo modifies jiǔ, it means very, resulting in the phrase meaning, “long time no see”.</string>
     <string name="lesson_1_card_3">This one is pretty straight forward. Zǎoshang means morning and just like in “hello”, hao means good.</string>
@@ -43,4 +43,12 @@
     <string name="lesson_5_card_8">Méi means “no” or “don’t” and guānxì means “worry”. Combined they mean “don’t worry about it” or “it’s ok”, typically used after someone says sorry.</string>
     <string name="lesson_5_card_9">The phrase wǒ bù zhīdào means “I don’t know”. Also, the phrase wǒ zhīdào means “I know”.</string>
     <string name="lesson_5_card_10">The phrase wǒ ài nǐ means “I love you”. The word ài means “love”.</string>
+    <string name="lesson_one_text">Hello there! Welcome to your first lesson! This first lesson is made to introduce you to the wonderful world of Chinese! By the end of this lesson you should be able to identify basic words.</string>
+    <string name="lesson_three_text">Welcome to your colors lesson! This lesson is meant to teach you colors in Chinese! By the end of this lesson you should be able to have learned the primary colors and other basic colors.</string>
+    <string name="lesson_two_text">Welcome to your numbers lesson! This lesson will teach you numbers in Chinese! By the end of this lesson you should be able to count to 100.</string>
+    <string name="lesson_five_text">Welcome to your conversation lesson! This lesson is made to teach you conversational phrases in Chinese! By the end of this lesson you should be able to have learned some basic conversational phrases.</string>
+    <string name="lesson_2_card_1">Traditionally 零 is used for the word \"zero\". But recently many countries have started to use Arabic numbering systems so 0 will or can be used just as well.</string>
+    <string name="lesson_2_card_3">Often times, you will need to use the word 两 liǎng instead of 二 (they both mean two). This is pretty confusing so we will try our best here. The word 二 is used when strictly counting like \"one, two, three\" or when giving a phone number. However, when you want to specify a quantity like \"two pencils please\", you would use 两.</string>
+    <string name="lesson_2_card_11">Counting is very simple in Chinese. To say \"11\" you would actually say \"ten one\" in Chinese or 十一. Similarly, \"21\" would be \"two ten one\" or 二十一.</string>
+    <string name="lesson_2_card_12">Just like counting with tens, counting in the hundreds is also very simple. \"One hundred\" is 一百 while \"one hundred and one\" is 一百一。 Note that 一百零一 also works but the first example is more common.</string>
 </resources>

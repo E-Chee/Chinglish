@@ -18,6 +18,15 @@ public class Quiz implements Parcelable {
     private String answerD;
     private String correctAnswer;
 
+    public Quiz(String question, String answerA, String answerB, String answerC, String answerD, String correctAnswer) {
+        this.question = question;
+        this.answerA = answerA;
+        this.answerB = answerB;
+        this.answerC = answerC;
+        this.answerD = answerD;
+        this.correctAnswer = correctAnswer;
+    }
+
     public String getQuestion() {
         return question;
     }
@@ -66,14 +75,6 @@ public class Quiz implements Parcelable {
         this.correctAnswer = correctAnswer;
     }
 
-    public Quiz(String question, String answerA, String answerB, String answerC, String answerD, String correctAnswer) {
-        this.question = question;
-        this.answerA = answerA;
-        this.answerB = answerB;
-        this.answerC = answerC;
-        this.answerD = answerD;
-        this.correctAnswer = correctAnswer;
-    }
 
     public static List<Quiz> generateLessonOneQuestions() {
         List<Quiz> quizzes = new ArrayList<>();
