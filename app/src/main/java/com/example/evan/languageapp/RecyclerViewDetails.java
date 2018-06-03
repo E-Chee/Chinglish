@@ -11,11 +11,10 @@ import android.widget.Toast;
 
 public class RecyclerViewDetails extends AppCompatActivity {
     private TextView title, bodyText, question, answerA, answerB, answerC, answerD;
-    private Button buttonA, buttonB, buttonC, buttonD;
+    private Button buttonA, buttonB, buttonC, buttonD, checkScore;
     private int score = 0, endTracker = 0;
     private boolean answer;
     private LanguageCard body;
-    private View vieww;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +22,14 @@ public class RecyclerViewDetails extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_recycler_view_details);
 
+        WireWidgets();
+        setOnClickListeners();
+
+        checkScore.setEnabled(false);
+
         Intent i = getIntent();
         body = i.getParcelableExtra("background info");
         Log.d("body text", "onCreate the body text was: " + body);
-
-        WireWidgets();
-        setOnClickListeners();
 
         bodyText.setText(body.getDesc());
         Log.d("body text 2", "onCreate after setting the body text was: " + body);
@@ -40,51 +41,43 @@ public class RecyclerViewDetails extends AppCompatActivity {
     }
 
     private void WireWidgets() {
-        title = (TextView) findViewById(R.id.background_title);
-        bodyText = (TextView) findViewById(R.id.background_body);
-        question = (TextView) findViewById(R.id.textView_question);
-        answerA = (TextView) findViewById(R.id.answer_a);
-        answerB = (TextView) findViewById(R.id.answer_b);
-        answerC = (TextView) findViewById(R.id.answer_c);
-        answerD = (TextView) findViewById(R.id.answer_d);
-        buttonA = (Button) findViewById(R.id.button_a);
-        buttonB = (Button) findViewById(R.id.button_b);
-        buttonC = (Button) findViewById(R.id.button_c);
-        buttonD = (Button) findViewById(R.id.button_d);
+        title = findViewById(R.id.background_title);
+        bodyText = findViewById(R.id.background_body);
+        question = findViewById(R.id.textView_question);
+        answerA = findViewById(R.id.answer_a);
+        answerB = findViewById(R.id.answer_b);
+        answerC = findViewById(R.id.answer_c);
+        answerD = findViewById(R.id.answer_d);
+        buttonA = findViewById(R.id.button_a);
+        buttonB = findViewById(R.id.button_b);
+        buttonC = findViewById(R.id.button_c);
+        buttonD = findViewById(R.id.button_d);
+        checkScore = findViewById(R.id.check_score_button);
     }
 
     private void setOnClickListeners() {
         buttonA.setOnClickListener(new View.OnClickListener() {
-            private View view;
             @Override
             public void onClick(View view) {
                 checkAnswerA();
-                this.view = view;
             }
-//            this.vieww = view;
         });
         buttonB.setOnClickListener(new View.OnClickListener() {
-            private View view;
             @Override
             public void onClick(View view) {
                 checkAnswerB();
-                this.view = view;
             }
         });
         buttonC.setOnClickListener(new View.OnClickListener() {
-            private View view;
             @Override
             public void onClick(View view) {
                 checkAnswerC();
-                this.view = view;
             }
         });
         buttonD.setOnClickListener(new View.OnClickListener() {
-            private View view;
             @Override
             public void onClick(View view) {
                 checkAnswerD();
-                this.view = view;
             }
         });
     }
@@ -149,25 +142,21 @@ public class RecyclerViewDetails extends AppCompatActivity {
     private void incorrect() {
         score--;
         endTracker++;
-        if(endTracker == 1) {
-            Intent i = new Intent (view.getContext(), EndLessonScreenActivity.class);
-            i.putExtra("score", score);
-            this.startActivity(i);
-        }
         Log.d("end tracker", "end tracker: " + endTracker);
         Toast.makeText(this, "NICE TRY LUL", Toast.LENGTH_SHORT).show();
+        if(body.getQuiz().getQuestion().equals(body.getQuiz().getQuizCardList().get(body.getQuiz().getQuizCardList().size()-1))) {
+            checkScore.setEnabled(true);
+        }
     }
 
     private void correct() {
         score++;
         endTracker++;
-        if(endTracker == 1) {
-            Intent i = new Intent (view.getContext(), EndLessonScreenActivity.class);
-            i.putExtra("score", score);
-            this.startActivity(i);
-        }
         Log.d("end tracker", "end tracker: " + endTracker);
         Toast.makeText(this, "YOU DID IT! :D", Toast.LENGTH_SHORT).show();
+        if(body.getQuiz().getQuestion().equals(body.getQuiz().getQuizCardList().get(body.getQuiz().getQuizCardList().size()-1))) {
+            checkScore.setEnabled(true);
+        }
     }
 
     private void disableAnswerButtons() {

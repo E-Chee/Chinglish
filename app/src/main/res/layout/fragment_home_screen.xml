@@ -10,16 +10,20 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
-        android:text="Language App"
+        android:layout_marginTop="44dp"
+        android:fontFamily="serif"
+        android:text="Chinglish"
         android:textColor="@android:color/background_dark"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_lessons"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="47dp"
         android:layout_marginBottom="8dp"
@@ -31,14 +35,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_app_title"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.093"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
         android:id="@+id/button_flashcards"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Flash Cards"
@@ -48,6 +53,7 @@
 
     <Button
         android:id="@+id/button_games"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="49dp"
         android:layout_marginBottom="72dp"

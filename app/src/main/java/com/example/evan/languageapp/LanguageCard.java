@@ -20,6 +20,8 @@ public class LanguageCard implements Parcelable{
     private String desc;
     private Quiz quiz;
 
+    public static List<LanguageCard> languageCardList;
+
     private String tone;
     private String explanation;
     private int audio;
@@ -31,6 +33,7 @@ public class LanguageCard implements Parcelable{
         this.chinese = chinese;
         this.quiz = quiz;
         this.desc = desc;
+        languageCardList = new ArrayList<LanguageCard>();
     }
 
     public LanguageCard(String tone, String explanation, int audio) {
@@ -85,6 +88,10 @@ public class LanguageCard implements Parcelable{
         this.desc = desc;
     }
 
+    public static List<LanguageCard> getLanguageCardList() {
+        return languageCardList;
+    }
+
     public int getAudio() {
         return audio;
     }
@@ -123,7 +130,8 @@ public class LanguageCard implements Parcelable{
        lessonOneCards.add(new LanguageCard("再見", "Zàijiàn", "Good bye", context.getString(R.string.lesson_1_card_8), quizzes.get(7)));
        lessonOneCards.add(new LanguageCard("明天見", "Míngtiān jiàn", "See you tomorrow", context.getString(R.string.lesson_1_card_9), quizzes.get(8)));
        lessonOneCards.add(new LanguageCard("晚安", "Wǎn'ān", "Good night",context.getString(R.string.lesson_1_card_10), quizzes.get(9)));
-        return lessonOneCards;
+        languageCardList = lessonOneCards;
+       return lessonOneCards;
     }
 
     public static List<LanguageCard> getLessonTwoCards(Context context) {
@@ -141,6 +149,7 @@ public class LanguageCard implements Parcelable{
         lessonTwoCards.add(new LanguageCard("九", "jiǔ", "nine","No further info needed for this word!", quizzes.get(0)));
         lessonTwoCards.add(new LanguageCard("十", "shí", "ten", context.getString(R.string.lesson_2_card_11), quizzes.get(3)));
         lessonTwoCards.add(new LanguageCard("百","bǎi","hundred",context.getString(R.string.lesson_2_card_12), quizzes.get(6)));
+        languageCardList = lessonTwoCards;
         return lessonTwoCards;
     }
 
@@ -157,7 +166,8 @@ public class LanguageCard implements Parcelable{
        lessonThreeCards.add(new LanguageCard("黑色", "Hēisè", "black","", quizzes.get(0)));
        lessonThreeCards.add(new LanguageCard("白色", "Báisè", "white","", quizzes.get(0)));
        lessonThreeCards.add(new LanguageCard("灰色", "Huīsè", "gray","", quizzes.get(5)));
-        return lessonThreeCards;
+       languageCardList = lessonThreeCards;
+       return lessonThreeCards;
     }
 
     public static List<LanguageCard> getLessonOneCards(Context context) {
@@ -173,6 +183,7 @@ public class LanguageCard implements Parcelable{
         lessonFourCards.add(new LanguageCard("也", "yě", "also",context.getString(R.string.lesson_4_card_8), quizzes.get(7)));
         lessonFourCards.add(new LanguageCard("得", "dé", "shows degree",context.getString(R.string.lesson_4_card_9), quizzes.get(8)));
         lessonFourCards.add(new LanguageCard("得", "de", "auxiliary verb / used after a verb",context.getString(R.string.lesson_4_card_10), quizzes.get(9)));
+        languageCardList = lessonFourCards;
         return lessonFourCards;
     }
 
@@ -188,7 +199,8 @@ public class LanguageCard implements Parcelable{
        lessonFiveCards.add(new LanguageCard("我叫 _", "wǒ jiào _", "my name is _",context.getString(R.string.lesson_5_card_7), quizzes.get(6)));
        lessonFiveCards.add(new LanguageCard("沒關係", "Méiguānxì", "it's ok",context.getString(R.string.lesson_5_card_8), quizzes.get(7)));
        lessonFiveCards.add(new LanguageCard("我不知道", "wǒ bù zhīdào", "I don't know",context.getString(R.string.lesson_5_card_9), quizzes.get(8)));
-       lessonFiveCards.add(new LanguageCard("我愛你", "wǒ ài nǐ", "I love you",context.getString(R.string.lesson_5_card_10), quizzes.get(9)));
+//       lessonFiveCards.add(new LanguageCard("我愛你", "wǒ ài nǐ", "I love you",context.getString(R.string.lesson_5_card_10), quizzes.get(9)));
+       languageCardList = lessonFiveCards;
         return lessonFiveCards;
     }
 

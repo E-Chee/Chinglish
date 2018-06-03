@@ -17,6 +17,7 @@ public class Quiz implements Parcelable {
     private String answerC;
     private String answerD;
     private String correctAnswer;
+    public static List<Quiz> quizCardList;
 
     public Quiz(String question, String answerA, String answerB, String answerC, String answerD, String correctAnswer) {
         this.question = question;
@@ -25,6 +26,7 @@ public class Quiz implements Parcelable {
         this.answerC = answerC;
         this.answerD = answerD;
         this.correctAnswer = correctAnswer;
+        quizCardList = new ArrayList<Quiz>();
     }
 
     public String getQuestion() {
@@ -75,6 +77,10 @@ public class Quiz implements Parcelable {
         this.correctAnswer = correctAnswer;
     }
 
+    public static List<Quiz> getQuizCardList() {
+        return quizCardList;
+    }
+
 
     public static List<Quiz> generateLessonOneQuestions() {
         List<Quiz> quizzes = new ArrayList<>();
@@ -88,6 +94,7 @@ public class Quiz implements Parcelable {
         quizzes.add(new Quiz("Which phrase says \"He and I\"","他和我","她和我","也和我","我和她","A"));
         quizzes.add(new Quiz("Which of these words has two tones for the same definition?","好","你","她","不","D"));
         quizzes.add(new Quiz("What is the function of the character \"和\"?","connect adjective","connect nouns","both a and b","none of the above","B"));
+        quizCardList = quizzes;
         return quizzes;
     }
 
@@ -100,6 +107,7 @@ public class Quiz implements Parcelable {
         quizzes.add(new Quiz("What does 3 + 2 in Chinese?","五","三二","八","十","A"));
         quizzes.add(new Quiz("What is 20 in Chinese?","二十","十二","三十","二零","A"));
         quizzes.add(new Quiz("What is 101 in Chinese?","一零一","十十一","一十一","一百一","D"));
+        quizCardList = quizzes;
         return quizzes;
     }
 
@@ -111,6 +119,7 @@ public class Quiz implements Parcelable {
         quizzes.add(new Quiz("Which of the following means orange?", "橙色", "紫色", "紅色", "黃色", "A"));
         quizzes.add(new Quiz("What does 綠色 mean?", "Red", "Yellow", "Purple", "Green", "D"));
         quizzes.add(new Quiz("which of the following is NOT a correct statement about 黑色, 白色, or 灰色?", "黑色 is black", "白色 is white", "灰色 is gray", "灰色 is black", "D"));
+        quizCardList = quizzes;
         return quizzes;
     }
 
@@ -126,6 +135,7 @@ public class Quiz implements Parcelable {
         quizzes.add(new Quiz("Which word shows degree?", "不", "很", "both a and b", "none of the above", "C"));
         quizzes.add(new Quiz("What does the phrase 不見 literally mean?", "I'm good", "No see", "Long time", "See you", "B"));
         quizzes.add(new Quiz("What does the phrase 可以 mean?", "maybe", "hello or what's up", "no or not", "can or okay", "D"));
+        quizCardList = quizzes;
         return quizzes;
     }
 
@@ -140,6 +150,7 @@ public class Quiz implements Parcelable {
         quizzes.add(new Quiz("How would you introduce yourself?", "我叫_", "你好_", "我好_", "我不_", "A"));
         quizzes.add(new Quiz("How do you say \"I know\"?", "不是都走", "我知道", "是的", "我很好", "B"));
         quizzes.add(new Quiz("What is a way in which you can show affection for someone?", "我愛你", "我不喜歡你", "你不好", "我不知道", "A"));
+        quizCardList = quizzes;
         return quizzes;
     }
 

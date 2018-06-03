@@ -27,7 +27,7 @@
 
     <TextView
         android:id="@+id/background_body"
-        android:layout_width="0dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -39,10 +39,10 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/textView_question"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background_title"
-        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintVertical_bias="0.197"
         tools:text="blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah" />
 
     <Button
@@ -197,4 +197,21 @@
         app:layout_constraintTop_toBottomOf="@+id/answer_c"
         app:layout_constraintVertical_bias="0.685"
         app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/check_score_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Check score!"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.648" />
 </android.support.constraint.ConstraintLayout>
