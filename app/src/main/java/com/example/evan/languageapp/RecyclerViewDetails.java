@@ -139,17 +139,11 @@ public class RecyclerViewDetails extends AppCompatActivity {
     private void incorrect() {
         score--;
         Toast.makeText(this, "Nice try but incorrect", Toast.LENGTH_SHORT).show();
-        if(body.getQuiz().getQuestion().equals(body.getQuiz().getQuizCardList().get(body.getQuiz().getQuizCardList().size()-1))) {
-
-        }
     }
 
     private void correct() {
         score++;
         Toast.makeText(this, "YOU DID IT! :D", Toast.LENGTH_SHORT).show();
-        if(body.getQuiz().getQuestion().equals(body.getQuiz().getQuizCardList().get(body.getQuiz().getQuizCardList().size()-1))) {
-
-        }
     }
 
     private void disableAnswerButtons() {
