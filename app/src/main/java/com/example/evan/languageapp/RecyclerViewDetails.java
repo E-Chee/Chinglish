@@ -143,7 +143,7 @@ public class RecyclerViewDetails extends AppCompatActivity {
         score--;
         endTracker++;
         Log.d("end tracker", "end tracker: " + endTracker);
-        Toast.makeText(this, "NICE TRY LUL", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Nice try but incorrect", Toast.LENGTH_SHORT).show();
         if(body.getQuiz().getQuestion().equals(body.getQuiz().getQuizCardList().get(body.getQuiz().getQuizCardList().size()-1))) {
             checkScore.setEnabled(true);
         }

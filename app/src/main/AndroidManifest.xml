@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_chinglish"
-        android:label="@string/app_name"
+        android:label="Chinglish"
         android:roundIcon="@mipmap/ic_chinglish_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -14,11 +14,6 @@
             android:label="@string/title_activity_home_screen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".GreetingsLessonActivity"
@@ -69,8 +64,16 @@
             android:name=".PinyinLessonActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".MatchEasyTwo" />
-        <activity android:name=".GameWordAdapter" />
-        <activity android:name=".EndLessonScreenActivity"></activity>
+        <activity android:name=".EndLessonScreenActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

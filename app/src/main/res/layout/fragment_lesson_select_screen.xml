@@ -8,8 +8,8 @@
 
     <ImageButton
         android:id="@+id/greeting_button"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -23,13 +23,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintTop_toBottomOf="@+id/grammar_textview"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/color_button"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -41,19 +41,18 @@
         android:src="@drawable/pantone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintTop_toBottomOf="@+id/greetings_textview"
+        app:layout_constraintVertical_bias="0.01" />
 
     <TextView
         android:id="@+id/greetings_textview"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text=" Greetings and Farewells"
         android:textAlignment="center"
         android:textSize="25dp"
@@ -61,32 +60,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
+        app:layout_constraintTop_toBottomOf="@+id/greeting_button"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/colors_textview"
-        android:layout_width="131dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Colors"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.787"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74"
+        app:layout_constraintTop_toBottomOf="@+id/color_button"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="Colors" />
 
     <ImageButton
         android:id="@+id/number_button"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -98,34 +96,33 @@
         android:src="@drawable/billiard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintTop_toBottomOf="@+id/pinyin_textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/numbers_textview"
-        android:layout_width="131dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Numbers"
         android:textAlignment="center"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/greeting_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.789"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733"
+        app:layout_constraintTop_toBottomOf="@+id/number_button"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="Numbers" />
 
     <ImageButton
         android:id="@+id/conversation_button"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -137,18 +134,18 @@
         android:src="@drawable/chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.201"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925"
+        app:layout_constraintTop_toBottomOf="@+id/greetings_textview"
+        app:layout_constraintVertical_bias="0.01"
         app:srcCompat="@drawable/chat" />
 
     <ImageButton
         android:id="@+id/grammar_button"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="324dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -158,49 +155,51 @@
         android:src="@drawable/grammar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintHorizontal_bias="0.201"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925" />
+        app:layout_constraintTop_toBottomOf="@+id/pinyin_textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/grammar_textview"
-        android:layout_width="131dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="56dp"
         android:text="Grammar"
         android:textAlignment="center"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintTop_toBottomOf="@+id/grammar_button"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/conversation_textview"
-        android:layout_width="164dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="Conversations"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/conversation_button"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/pinyin_textView"
-        android:layout_width="164dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Pinyin"
@@ -209,13 +208,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205" />
+        app:layout_constraintTop_toBottomOf="@+id/pinyin_button"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/pinyin_button"
-        android:layout_width="97dp"
-        android:layout_height="97dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -229,6 +228,6 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
