@@ -64,7 +64,6 @@
             android:name=".PinyinLessonActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".MatchEasyTwo" />
-        <activity android:name=".EndLessonScreenActivity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -74,6 +73,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

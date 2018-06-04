@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class RecyclerViewDetails extends AppCompatActivity {
     private TextView title, bodyText, question, answerA, answerB, answerC, answerD;
-    private Button buttonA, buttonB, buttonC, buttonD, checkScore;
-    private int score = 0, endTracker = 0;
+    private Button buttonA, buttonB, buttonC, buttonD;
+    private int score;
     private boolean answer;
     private LanguageCard body;
 
@@ -24,8 +24,6 @@ public class RecyclerViewDetails extends AppCompatActivity {
 
         WireWidgets();
         setOnClickListeners();
-
-        checkScore.setEnabled(false);
 
         Intent i = getIntent();
         body = i.getParcelableExtra("background info");
@@ -52,7 +50,6 @@ public class RecyclerViewDetails extends AppCompatActivity {
         buttonB = findViewById(R.id.button_b);
         buttonC = findViewById(R.id.button_c);
         buttonD = findViewById(R.id.button_d);
-        checkScore = findViewById(R.id.check_score_button);
     }
 
     private void setOnClickListeners() {
@@ -141,21 +138,17 @@ public class RecyclerViewDetails extends AppCompatActivity {
 
     private void incorrect() {
         score--;
-        endTracker++;
-        Log.d("end tracker", "end tracker: " + endTracker);
         Toast.makeText(this, "Nice try but incorrect", Toast.LENGTH_SHORT).show();
         if(body.getQuiz().getQuestion().equals(body.getQuiz().getQuizCardList().get(body.getQuiz().getQuizCardList().size()-1))) {
-            checkScore.setEnabled(true);
+
         }
     }
 
     private void correct() {
         score++;
-        endTracker++;
-        Log.d("end tracker", "end tracker: " + endTracker);
         Toast.makeText(this, "YOU DID IT! :D", Toast.LENGTH_SHORT).show();
         if(body.getQuiz().getQuestion().equals(body.getQuiz().getQuizCardList().get(body.getQuiz().getQuizCardList().size()-1))) {
-            checkScore.setEnabled(true);
+
         }
     }
 

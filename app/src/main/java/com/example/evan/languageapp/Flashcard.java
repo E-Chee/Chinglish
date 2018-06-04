@@ -27,12 +27,12 @@ public class Flashcard implements Parcelable{
     }
 
 
-    public Flashcard(int number, String chinese, String pinyin, String translation, boolean star) {
+    public Flashcard(int number, String chinese, String pinyin, String translation) {
         this.number = number;
         this.chinese = chinese;
         this.pinyin = pinyin;
         this.translation = translation;
-        this.star = star;
+        this.star = false;
     }
 
     public Flashcard(String chinese, String translation){
@@ -141,7 +141,7 @@ public class Flashcard implements Parcelable{
         this.translation = translation;
     }
 
-    public boolean isStar() {
+    public boolean getStarStatus() {
         return star;
     }
 

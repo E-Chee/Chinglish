@@ -16,6 +16,7 @@ public class LessonOneActivity extends AppCompatActivity {
     private WordAdapter adapter;
     private List<LanguageCard> results;
     private TextView lessonTitle, lessonIntro;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -9,6 +9,7 @@ import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SnapHelper;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ public class GrammarFlashcardActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private GreetingsFlashcardAdapter adapter;
     private List<Vocab> words;
+    private Button star;
 
 
     @Override
@@ -36,7 +38,7 @@ public class GrammarFlashcardActivity extends AppCompatActivity {
 
         //wire the recycler view
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-
+        star = (Button) findViewById(R.id.star_button);
 
 
         SnapHelper snapHelper = new PagerSnapHelper();
